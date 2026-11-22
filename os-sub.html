@@ -1,0 +1,44 @@
+<section class="pin" id="os-sub" style="height:420vh"><div class="sticky sb-st">
+<div class="center" style="padding:0 6vw"><span class="eyebrow">자막 바</span><h2 style="font-size:clamp(34px,min(4.6vw,7vh),72px)">글자에 딱 맞게.</h2></div>
+<div class="types sb-p" style="margin-top:2vh"><span class="on">자막 바</span><span>말풍선</span><span>스티커</span></div>
+<div class="sb-ring" id="sbRing">
+<div class="sb-floor"></div>
+<div class="frame sb-f"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@main/n06.webp" alt="자막 바 화면" draggable="false" loading="lazy" ez-prevent="img"></div>
+<div class="frame sb-f"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@main/n07.webp" alt="말풍선 화면" draggable="false" loading="lazy" ez-prevent="img"></div>
+<div class="frame sb-f"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@main/n08.webp" alt="스티커 화면" draggable="false" loading="lazy" ez-prevent="img"></div>
+</div>
+<div class="sb-caps" id="sbCap"><p>글자 길이에 맞춰 크기가 자동으로 맞춰지는 자막 바 17종</p><p>메시지 앱 느낌의 말풍선 4종, 내가 보냄·상대가 보냄</p><p>태그 칩, 리본, 형광펜까지 포인트 스티커 6종</p></div>
+</div></section>
+<style>
+#os-landing .sb-st{display:flex;flex-direction:column;align-items:stretch;padding-top:3vh;box-sizing:border-box}
+#os-landing .sb-p{align-self:center;position:relative;z-index:5}
+#os-landing .sb-p span{cursor:pointer}
+#os-landing .sb-ring{position:relative;flex:1;min-height:0;perspective:1400px;perspective-origin:50% 30%}
+#os-landing .sb-floor{position:absolute;left:50%;top:58%;width:min(90vw,1300px);height:60%;transform:translateX(-50%);background:radial-gradient(ellipse 50% 40% at 50% 20%,rgba(47,211,107,.07),rgba(47,211,107,0) 70%);pointer-events:none;filter:blur(10px)}
+#os-landing .sb-f{position:absolute;left:50%;top:48%;width:min(60vw,68vh,1040px);backface-visibility:hidden;will-change:transform,opacity,filter;transform-origin:50% 100%;box-shadow:0 60px 120px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
+#os-landing .sb-f::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.10),rgba(255,255,255,0) 35%);pointer-events:none;opacity:var(--gl,0)}
+#os-landing .sb-caps{position:relative;height:clamp(52px,7vh,72px);margin:0 6vw 3vh}
+#os-landing .sb-caps p{position:absolute;left:0;right:0;top:0;margin:0;text-align:center;font-size:clamp(15px,1.4vw,20px);color:var(--t2);font-weight:300;opacity:0;will-change:transform,opacity}
+@media (max-width:700px){#os-landing .sb-f{width:88vw;top:50%}#os-landing .sb-ring{perspective:900px}#os-landing .sb-caps p{font-size:14px;padding:0 4vw}}
+</style>
+<script>
+(function(){var sec=document.getElementById('os-sub');if(!sec)return;
+function cl(v,a,b){return v<a?a:v>b?b:v}function seg(p,a,b){return cl((p-a)/(b-a),0,1)}function sm(t){return t*t*(3-2*t)}
+var F=[].slice.call(sec.querySelectorAll('.sb-f')),P=[].slice.call(sec.querySelectorAll('.sb-p span')),CP=[].slice.call(sec.querySelectorAll('.sb-caps p'));
+var pos=-1.2,mx=0,my=0,tx=0,ty=0,last=-1,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+addEventListener('pointermove',function(e){tx=e.clientX/innerWidth*2-1;ty=e.clientY/innerHeight*2-1},{passive:true});
+function target(p){var x=seg(p,.04,.9)*2.75-.75;var k=Math.floor(x),f=x-k;return k+sm(seg(f,.12,.88))}
+P.forEach(function(s,i){s.addEventListener('click',function(){var top=sec.getBoundingClientRect().top+scrollY,len=sec.offsetHeight-innerHeight;var p=.04+(i+.75+.45)/2.75*.86;scrollTo({top:top+len*p,behavior:'smooth'})})});
+function frame(){var r=sec.getBoundingClientRect(),vh=innerHeight;
+if(r.bottom>-60&&r.top<vh+60){var p=cl(-r.top/(sec.offsetHeight-vh),0,1);
+var tg=cl(target(p),-1.2,2);if(r.top>0)tg=-1.2+ (1-cl(r.top/vh,0,1))*.9;pos+=(tg-pos)*(RM?1:.11);mx+=(tx-mx)*.06;my+=(ty-my)*.06;
+F.forEach(function(el,i){var d=i-pos,tr,op,bl,br;
+ if(d>=0){var u=Math.min(d,2);tr='translate(-50%,-50%) translate3d(0,'+(u*44).toFixed(2)+'%,'+(-u*360).toFixed(1)+'px) rotateX('+(u*64).toFixed(2)+'deg) scale('+(1-u*.06).toFixed(4)+')';op=cl(1-u*.5,0,1)*(u>1?cl(2-u,0,1):1);bl=u*2.5;br=1-u*.45}
+ else{var a=Math.min(-d,2.2);tr='translate(-50%,-50%) translate3d(0,'+(-a*24).toFixed(2)+'%,'+(-Math.pow(a,.6)*400).toFixed(1)+'px) rotateX('+(-a*9).toFixed(2)+'deg) scale('+(1-a*.05).toFixed(4)+')';op=cl(1-a*.45,0,1)*(a>1.4?cl((2.2-a)/.8,0,1):1);bl=a*2.2;br=1-a*.4}
+ var fr=cl(1-Math.abs(d)*2.5,0,1);tr+=' rotateY('+(mx*5*fr).toFixed(2)+'deg) rotateX('+(-my*3.5*fr).toFixed(2)+'deg)';
+ el.style.transform=tr;el.style.opacity=op.toFixed(3);el.style.filter=(bl>.15?'blur('+bl.toFixed(2)+'px) ':'')+'brightness('+br.toFixed(3)+')';el.style.zIndex=String(100-Math.round(Math.abs(d)*10)+(d>0?3:-3));el.style.setProperty('--gl',fr.toFixed(3))});
+var a=cl(Math.round(pos),0,2);if(a!==last){last=a;P.forEach(function(s,i){s.classList.toggle('on',i===a)})}
+CP.forEach(function(c,i){var d=i-pos,o=cl(1-Math.abs(d)*2.2,0,1);c.style.opacity=o.toFixed(3);c.style.transform='translateY('+(d*18).toFixed(1)+'px)';c.style.filter=o<.98?'blur('+((1-o)*6).toFixed(1)+'px)':'none'})}
+requestAnimationFrame(frame)}
+requestAnimationFrame(frame)})();
+</script>

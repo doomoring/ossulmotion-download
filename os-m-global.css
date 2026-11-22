@@ -1,0 +1,9 @@
+@media (max-width:700px){
+.main_top_banner .top_banner_box_inner{position:relative;display:flex;align-items:center;justify-content:center;min-height:34px;padding:0 40px!important;box-sizing:border-box}
+.main_top_banner .top_banner_text{margin:0!important;line-height:34px}
+.main_top_banner .top_banner_text a{font-size:0!important;white-space:nowrap}
+.main_top_banner .top_banner_text a::before{content:'오쓸모션 30일 무료 체험 · 카드 없이 이메일로 시작';font-size:12.5px;font-weight:600;letter-spacing:-.01em}
+.main_top_banner .top_banner_close input,.main_top_banner .top_banner_close label{display:none!important}
+.main_top_banner .top_banner_close{position:absolute!important;right:10px;top:50%;transform:translateY(-50%);margin:0!important;padding:0!important}
+#os-top{right:14px!important;bottom:calc(16px + env(safe-area-inset-bottom))!important;width:40px!important;height:40px!important}
+}
