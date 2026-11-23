@@ -28,7 +28,7 @@ function run(){
  $$('#contents .ec-base-paginate').forEach(function(p){if($$('ol li',p).length<=1)p.style.display='none'});
  /* 마이쇼핑 주문 단계 이름 (디지털 상품) */
  var map={'입금전':'결제 대기','배송준비중':'결제 완료','배송중':'처리 중','배송완료':'완료'};
- $$('#contents .state__order li').forEach(function(li){$$('*',li).forEach(function(e){if(e.children.length===0){var t=txt(e);if(map[t])e.textContent=map[t]}})});
+ $$('#contents .state__order li').forEach(function(li){ $$('*',li).forEach(function(e){if(e.children.length===0){var t=txt(e);if(map[t])e.textContent=map[t]}})});
  $$('#contents .state__cs li').forEach(function(li){if(/교환/.test(txt(li)))li.style.display='none'});
 }
 if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);

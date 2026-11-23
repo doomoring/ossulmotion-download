@@ -68,7 +68,7 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 
 /* 장바구니 (디지털 상품: 배송 관련 숨김) */
 #contents .xans-order-tabinfo,#contents .xans-order-normindividual > .summary,#contents .xans-order-selectorder .gRight,#contents .xans-order-basketguide{display:none!important}
-#contents .os-guide{margin:48px 0 0;padding:28px 32px;border:1px solid var(--os-line);border-radius:20px;background:var(--os-bg2)}
+#contents .os-guide{box-sizing:border-box;width:auto;max-width:1240px;margin:48px auto 0;padding:28px 32px;border:1px solid var(--os-line);border-radius:20px;background:var(--os-bg2)}
 #contents .os-guide h3{margin:0 0 14px;font-size:17px;font-weight:700;color:var(--os-t1)}
 #contents .os-guide li{position:relative;padding-left:14px;margin:6px 0;font-size:14px;line-height:1.7;color:var(--os-t2);list-style:none}
 #contents .os-guide li::before{content:'';position:absolute;left:0;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--os-g)}
@@ -152,3 +152,6 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 /* 상품 목록: 할인 배지 위치 · 빈 하위분류 막대 */
 #contents .prdList__item .sale_box{left:auto!important;right:12px!important;top:auto!important;bottom:12px!important;width:auto!important;height:26px!important;padding:0 10px!important;border-radius:999px!important;background:var(--os-g)!important;color:var(--os-gd)!important;font:700 12px/26px Pretendard,system-ui,sans-serif!important;display:flex!important;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 #contents .ec-base-tab.typeMenu:has(.menuCategory),#contents .menuCategory{display:none!important}
+
+@media (max-width:1280px){#contents .os-guide{margin:40px 20px 0}}
+@media (max-width:700px){#contents .os-guide{margin:32px 16px 0;padding:22px 20px}}
