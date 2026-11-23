@@ -16,7 +16,8 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 /* 헤더 장바구니 개수 */
 #header .top_mypage{position:relative}
 #header .xans-layout-orderbasketcount{position:relative!important;display:inline-flex!important;align-items:center}
-#header .xans-layout-orderbasketcount .count,#header .xans-layout-orderbasketcount em,#header .xans-layout-orderbasketcount span{position:absolute!important;right:-8px!important;top:-6px!important;left:auto!important;bottom:auto!important;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--os-g)!important;color:var(--os-gd)!important;font:700 10px/16px Pretendard,system-ui,sans-serif!important;text-align:center;box-sizing:border-box;filter:none!important}
+#header .xans-layout-orderbasketcount > .count{position:absolute!important;right:-8px!important;top:-6px!important;left:auto!important;bottom:auto!important;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--os-g)!important;color:var(--os-gd)!important;font:700 10px/16px Pretendard,system-ui,sans-serif!important;text-align:center;box-sizing:border-box;filter:none!important}
+#header .xans-layout-orderbasketcount .count *{position:static!important;background:none!important;color:inherit!important;font:inherit!important;min-width:0!important;height:auto!important;padding:0!important;border:0!important;display:inline!important}
 #header .xans-layout-orderbasketcount .count.displaynone,#header .xans-layout-orderbasketcount .displaynone{display:none!important}
 
 /* 공통 폼 요소 (다크) */
@@ -40,9 +41,9 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 #contents .ec-base-paginate .first,#contents .ec-base-paginate .last{display:none!important}
 #contents .ec-base-help,#contents .ec-base-help li{color:var(--os-t2)!important}
 #contents .ec-base-help::before,#contents .ec-base-help .txtWarn::before{filter:invert(1)}
-#contents .btnNormal,#contents .btnBasic,#contents a.btnNormal,#contents button.btnNormal{background:transparent!important;border:1px solid var(--os-line2)!important;color:var(--os-t1)!important;border-radius:999px!important;transition:border-color .2s,color .2s}
+#contents .btnNormal,#contents .btnBasic,#contents a.btnNormal,#contents button.btnNormal,#contents .btnNormalFix,#contents .btnBasicFix{background:transparent!important;border:1px solid var(--os-line2)!important;color:var(--os-t1)!important;border-radius:999px!important;transition:border-color .2s,color .2s}
 #contents .btnNormal:hover,#contents .btnBasic:hover{border-color:var(--os-g)!important;color:var(--os-g)!important}
-#contents .btnSubmit,#contents a.btnSubmit,#contents button.btnSubmit{background:var(--os-g)!important;border:1px solid var(--os-g)!important;color:var(--os-gd)!important;border-radius:999px!important;font-weight:700}
+#contents .btnSubmit,#contents a.btnSubmit,#contents button.btnSubmit,#contents .btnSubmitFix{background:var(--os-g)!important;border:1px solid var(--os-g)!important;color:var(--os-gd)!important;border-radius:999px!important;font-weight:700}
 #contents .btnSubmit:hover{background:#3BE07A!important}
 #contents .ec-base-prdEmpty,#contents .message{color:var(--os-t2)!important}
 #contents .ec-base-prdEmpty::before,#contents .message::before{filter:invert(.75)}
@@ -53,7 +54,8 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 /* 마이쇼핑 */
 #contents .section.benefit ul,#contents .section.benefit li,#contents .section.benefit li a{border-color:var(--os-line)!important;background:transparent}
 #contents .section.benefit ul{border:1px solid var(--os-line)!important;border-radius:20px;overflow:hidden;background:var(--os-bg2)!important}
-#contents .section.benefit li+li{border-left:1px solid var(--os-line)!important}
+#contents .section.benefit li+li{border-left:0!important}
+#contents .section.benefit li::after,#contents .section.benefit li::before{background:var(--os-line)!important;border-color:var(--os-line)!important}
 #contents .section.benefit li a{color:var(--os-t1)!important}
 #contents .section.benefit svg,#contents .section.benefit img,#contents .section.benefit i{filter:invert(1);opacity:.75}
 #contents .state__cs,#contents .state__cs li{border-color:var(--os-line)!important;background:var(--os-bg2)!important}
@@ -147,3 +149,6 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 #os-landing #p1 .co{display:none!important}
 #os-landing #p1 .txt{padding:0 6vw}
 }
+/* 상품 목록: 할인 배지 위치 · 빈 하위분류 막대 */
+#contents .prdList__item .sale_box{left:auto!important;right:12px!important;top:auto!important;bottom:12px!important;width:auto!important;height:26px!important;padding:0 10px!important;border-radius:999px!important;background:var(--os-g)!important;color:var(--os-gd)!important;font:700 12px/26px Pretendard,system-ui,sans-serif!important;display:flex!important;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+#contents .ec-base-tab.typeMenu:has(.menuCategory),#contents .menuCategory{display:none!important}
