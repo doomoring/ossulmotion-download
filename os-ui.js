@@ -27,7 +27,7 @@ function run(){
  if(/\/order\/basket/.test(location.pathname)){
   $$('#contents .cart-product .xans-order-emptyitem, #contents .cart-product .xans-order-emptyitem > .contents, #contents .xans-order-basketpackage .ec-base-prdInfo').forEach(function(e){e.style.setProperty('background-color','transparent','important');e.style.setProperty('border-color','transparent','important')});
   $$('#contents .prdBox .prdName').forEach(function(n){if(n.parentNode.querySelector('.os-sub'))return;var s=document.createElement('span');s.className='os-sub';s.textContent='매달 자동 결제 · 언제든 해지 · 키 1개 = 컴퓨터 1대';n.parentNode.insertBefore(s,n.nextSibling)});
-  var fi=$('#contents #orderFixItem');if(fi&&!$('#contents .os-paynote')){var u=document.createElement('ul');u.className='os-paynote';u.innerHTML='<li>결제될 때마다 30일 라이선스 키가 이메일로 와요</li><li>매달 같은 금액이 자동 결제돼요</li><li>마이쇼핑 &gt; 정기배송 관리에서 언제든 해지</li>';fi.parentNode.insertBefore(u,fi.nextSibling)}
+  var fi=$('#contents #orderFixItem');if(fi&&!$('#contents .os-paynote')){var u=document.createElement('ul');u.className='os-paynote';u.innerHTML='<li>키는 첫 결제 때 이메일로 와요</li><li>다음 달부터 같은 키가 30일씩 자동 연장돼요</li><li>마이쇼핑 &gt; 정기배송 관리에서 언제든 해지</li>';fi.parentNode.insertBefore(u,fi.nextSibling)}
  }
  /* 할인 없는 상품의 줄 그은 가격 숨김 */
  $$('#contents .description, #contents .prdBox, #contents .xans-record-').forEach(function(box){var s=$$('del, strike, .strike, [style*="line-through"]',box);s.forEach(function(el){var v=txt(el).replace(/\D/g,'');if(!v)return;var others=$$('li,span,strong,p,div',box).filter(function(o){return o!==el&&!o.contains(el)&&!el.contains(o)&&o.children.length===0&&txt(o).replace(/\D/g,'')===v});if(others.length)el.classList.add('os-same')})});
