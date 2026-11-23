@@ -124,3 +124,20 @@ html.os-p-guide #contents .xans-mall-faq{display:none!important}
 #contents .xans-myshop-orderhistoryhead .txtList{padding-left:4px!important}
 #contents .xans-myshop-orderhistoryhead .txtList li{font-size:13px!important;color:var(--os-t3)!important}
 @media (max-width:1023px){#contents .xans-myshop-orderhistoryhead fieldset .date{flex-wrap:wrap}#contents .xans-myshop-orderhistoryhead fieldset .date input[type=text]{width:108px!important}}
+/* 공통 탭(마이쇼핑 전체) */
+#contents .ec-base-tab.typeNav{background:transparent!important;border:0!important;margin-bottom:28px!important}
+#contents .ec-base-tab.typeNav ul.menu{display:flex!important;flex-wrap:wrap;gap:8px;border:0!important;background:transparent!important}
+#contents .ec-base-tab.typeNav ul.menu li{flex:none!important;width:auto!important;border:0!important;background:transparent!important;margin:0!important}
+#contents .ec-base-tab.typeNav ul.menu li a{min-width:0!important;width:auto!important;display:inline-flex!important;align-items:center;height:40px!important;padding:0 18px!important;border:1px solid var(--os-line)!important;border-radius:999px!important;background:transparent!important;color:var(--os-t2)!important;font-size:14px!important;line-height:1!important;box-shadow:none!important}
+#contents .ec-base-tab.typeNav ul.menu li a:hover{border-color:var(--os-line2)!important;color:var(--os-t1)!important}
+#contents .ec-base-tab.typeNav ul.menu li.selected a{border-color:var(--os-g)!important;color:var(--os-g)!important;background:rgba(47,211,107,.08)!important;font-weight:600}
+#contents .ec-base-tab.typeNav ul.menu li::after,#contents .ec-base-tab.typeNav ul.menu li a::after,#contents .ec-base-tab.typeNav ul.menu::before{display:none!important}
+/* 공통 안내 상자 */
+#contents .ec-base-help:not(.xans-order-basketguide){margin-top:40px!important;padding:26px 28px!important;border:1px solid var(--os-line)!important;border-radius:20px!important;background:var(--os-bg2)!important}
+#contents .ec-base-help:not(.xans-order-basketguide) > h3{margin:0 0 12px!important;padding:0!important;border:0!important;background:transparent!important;font-size:16px!important;font-weight:700;color:var(--os-t1)!important}
+#contents .ec-base-help:not(.xans-order-basketguide) .inner{padding:0!important;border:0!important;background:transparent!important}
+#contents .ec-base-help:not(.xans-order-basketguide) li{font-size:13px!important;line-height:1.8!important;color:var(--os-t2)!important}
+#contents .ec-base-help:not(.xans-order-basketguide) h4{margin:14px 0 6px!important;font-size:14px!important;color:var(--os-t1)!important}
+/* 적립금 요약 */
+#contents .xans-myshop-summary.ec-base-box{border-radius:20px!important}
+@media (max-width:700px){#contents .ec-base-help:not(.xans-order-basketguide){margin:32px 0 0!important;padding:20px!important}}
