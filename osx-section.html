@@ -1,0 +1,226 @@
+<!-- ▼ 오쓸모션 꾸밈 자막 · 자막 바 소개 구역 (osx) — 홈페이지 방 2026-11-24 -->
+<style id="osx-css">
+#os-landing #p3{display:none!important}
+@property --osx-g{syntax:'<color>';inherits:true;initial-value:#121316}
+.osx{--osx-mint:#2FD36B;--osx-ink:#F5F5F7;--osx-dim:#8E8E93;--osx-line:#26282D;color:var(--osx-ink);position:relative}
+.osx *{box-sizing:border-box}
+.osx{word-break:keep-all}
+.osx img{-webkit-user-drag:none;user-select:none}
+.osx-h{text-align:center;padding:0 20px;position:relative;z-index:3}
+.osx-eb{display:inline-block;font-size:14px;font-weight:700;color:var(--osx-mint);letter-spacing:.06em;margin-bottom:14px}
+.osx .osx-h h2,#osx-fun .osx-h h2,#osx-bars .osx-h h2{font-size:clamp(34px,4.6vw,72px);line-height:1.08;letter-spacing:-.035em;margin:0 0 14px;font-weight:800;color:var(--osx-ink)}
+.osx .osx-h p,#osx-fun .osx-h p,#osx-bars .osx-h p{margin:0;color:var(--osx-dim);font-size:clamp(15px,1.25vw,19px);line-height:1.6}
+
+/* ── 1) 꾸밈 자막 ── */
+#osx-fun{height:260vh}
+#osx-fun .osx-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2vh;overflow:hidden;perspective:1400px}
+#osx-fun .osx-stage{position:relative;width:min(1320px,94vw,calc((100vh - 230px) * 1.628));aspect-ratio:1400/860;transform-style:preserve-3d}
+#osx-fun .osx-panel{position:absolute;left:50%;top:50%;width:40%;border-radius:14px;box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 0 1px #2a2c31;transform:translate(-50%,-50%);will-change:transform,opacity;opacity:0}
+#osx-fun .osx-glow{position:absolute;left:50%;top:50%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(47,211,107,.12),transparent 70%);pointer-events:none;opacity:0}
+.osx-stk{position:absolute;transform:translate(-50%,-50%)}
+.osx-stk .osx-fly{will-change:transform,opacity,filter;opacity:0}
+.osx-stk .osx-flt{animation:osxFloat var(--ft,6s) ease-in-out infinite;animation-delay:var(--fd,0s);animation-play-state:paused}
+#osx-fun.osx-landed .osx-flt{animation-play-state:running}
+.osx-stk .osx-tilt{transform:rotate(var(--tilt,0deg))}
+.osx-stk .osx-pre{transform-origin:50% 62%}
+.osx-stk img{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.45))}
+.osx-lyr{position:relative}.osx-lyr .osx-top{position:absolute;inset:0;clip-path:inset(0 100% 0 0)}
+@keyframes osxFloat{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-7px,0)}}
+
+/* ── 2) 자막 바 ── */
+#osx-bars{height:calc(7 * 72vh + 100vh)}
+#osx-bars .osx-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3.2vh;overflow:hidden;--osx-g:#121316;transition:--osx-g 1s ease}
+#osx-bars .osx-pin::before{content:"";position:absolute;inset:0;background:radial-gradient(1100px 620px at 62% 58%,var(--osx-g),transparent 72%);pointer-events:none}
+#osx-bars .osx-row{position:relative;display:flex;align-items:center;gap:44px;z-index:2}
+.osx-side{width:230px;flex:none}
+.osx-side .osx-n{font-size:13px;color:var(--osx-dim);letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.osx-side .osx-t{font-size:32px;font-weight:800;margin:8px 0 6px;letter-spacing:-.025em;line-height:1.15;transition:color .6s}
+.osx-side .osx-c{font-size:14px;font-weight:700;margin-bottom:8px}
+.osx-side .osx-d{font-size:13.5px;color:var(--osx-dim);line-height:1.65;min-height:46px;margin-bottom:24px}
+.osx-swap{display:block;will-change:transform,opacity}
+.osx-dots{display:flex;flex-direction:column;gap:9px}
+.osx-dots b{display:flex;align-items:center;gap:11px;font-weight:500;font-size:14px;color:#55595f;transition:color .45s;cursor:pointer}
+.osx-dots b i{width:8px;height:8px;border-radius:50%;background:#33363c;transition:background .45s,transform .45s cubic-bezier(.3,1.6,.5,1)}
+.osx-dots b.on{color:var(--osx-ink)}.osx-dots b.on i{background:var(--c);transform:scale(1.45)}
+.osx-col{display:flex;flex-direction:column;gap:16px;width:min(980px,calc(100vw - 340px),calc((100vh - 330px) * 1.778));min-width:0}
+.osx-player{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 40px 110px rgba(0,0,0,.6),0 0 0 1px #24262b;isolation:isolate}
+.osx-scene{position:absolute;inset:-2%;background-size:cover;background-position:center;animation:osxKb 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes osxKb{from{transform:scale(1)}to{transform:scale(1.08) translate3d(-1.4%,-1%,0)}}
+.osx-bar{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform-origin:50% 86%;will-change:transform,opacity,filter}
+.osx-ctl{position:absolute;left:0;right:0;bottom:0;height:42px;display:flex;align-items:center;gap:12px;padding:0 16px;background:linear-gradient(transparent,rgba(0,0,0,.6));font:12px ui-monospace,Menlo,monospace;color:#ddd;z-index:3}
+.osx-trk{flex:1;height:3px;background:rgba(255,255,255,.22);border-radius:2px;overflow:hidden}.osx-trk i{display:block;height:100%;width:100%;background:var(--osx-mint);transform-origin:left;transform:scaleX(0)}
+.osx-pp{width:0;height:0;border-left:9px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.osx-more .osx-ml{display:block;font-size:12px;color:var(--osx-dim);margin-bottom:9px;letter-spacing:.04em}
+.osx-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+.osx-thumbs div{height:70px;border-radius:12px;background:linear-gradient(160deg,#1c1d22,#141518);border:1px solid #24262b;display:flex;align-items:center;justify-content:center;padding:9px;opacity:0;transform:translate3d(0,12px,0);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
+.osx-thumbs div.on{opacity:1;transform:none}.osx-thumbs img{max-width:100%;max-height:100%;display:block}
+.osx-prog{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:140px;height:2px;background:#2a2c31;border-radius:2px;overflow:hidden;z-index:2}.osx-prog i{display:block;height:100%;background:var(--osx-mint);transform-origin:left;transform:scaleX(0)}
+
+/* ── 휴대폰 ── */
+@media (max-width:760px){
+  #osx-fun{height:auto;padding:12vh 0 6vh}
+  #osx-fun .osx-pin{position:relative;height:auto;overflow:visible;gap:28px}
+  #osx-fun .osx-stage{width:100%;aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:20px 14px;padding:0 16px}
+  #osx-fun .osx-panel{position:relative;left:auto;top:auto;grid-column:1/-1;width:100%;transform:none;opacity:1}
+  #osx-fun .osx-glow{display:none}
+  .osx-stk{position:relative;left:auto!important;top:auto!important;width:auto!important;transform:none;display:flex;align-items:center;justify-content:center}
+  .osx-stk.osx-wide{grid-column:1/-1}
+  .osx-stk>.osx-fly{width:100%}.osx-stk:not(.osx-wide)>.osx-fly{max-width:170px}
+  .osx-stk .osx-fly{opacity:0;transform:translate3d(var(--mx),0,0) rotate(var(--fr)) scale(.75);transition:transform 1s cubic-bezier(.17,1.22,.32,1),opacity .6s ease;transition-delay:var(--md,0s)}
+  .osx-stk.osx-in .osx-fly{opacity:1;transform:none}
+  #osx-bars{height:calc(7 * 62vh + 100vh)}
+  #osx-bars .osx-row{flex-direction:column;gap:16px}
+  .osx-side{width:auto;text-align:center}.osx-dots{display:none}.osx-side .osx-t{font-size:24px;margin:6px 0 4px}.osx-side .osx-d{margin-bottom:0;min-height:0;font-size:13px}
+  .osx-col{width:calc(100vw - 32px)}.osx-player{border-radius:12px}.osx-ctl{height:22px;padding:0 8px;gap:6px;font-size:9px}.osx-ctl .osx-tm{display:none}
+  .osx-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}.osx-thumbs div:nth-child(n+3){display:none}.osx-thumbs div{height:54px}
+  #osx-bars .osx-pin{gap:2.4vh}
+}
+@media (prefers-reduced-motion:reduce){
+  .osx *{animation:none!important;transition:none!important}
+  #osx-fun{height:auto}#osx-fun .osx-pin{position:relative;height:auto;padding:10vh 0}
+  .osx-stk .osx-fly,#osx-fun .osx-panel{opacity:1!important;transform:none!important;filter:none!important}
+  .osx-lyr .osx-top{clip-path:none}
+}
+</style>
+
+<section class="osx" id="osx-fun" aria-label="꾸밈 자막 소개">
+  <div class="osx-pin">
+    <div class="osx-h"><span class="osx-eb">꾸밈 자막</span><h2>7가지 테마, 168개 디자인</h2><p>꾸밈 자막·자막 바 모두. 고르고, 글자만 바꾸면 끝.</p></div>
+    <div class="osx-stage" id="osx-stage"><div class="osx-glow"></div><img class="osx-panel" data-src="panel_funtext" alt="오쓸모션 꾸밈 자막 화면"></div>
+  </div>
+</section>
+
+<section class="osx" id="osx-bars" aria-label="자막 바 소개">
+  <div class="osx-pin">
+    <div class="osx-h"><span class="osx-eb">자막 바</span><h2>111가지 자막 바</h2><p>기본 27개 + 7가지 테마 × 12개. 영상 아래에 맞춰 한 번에 넣어요.</p></div>
+    <div class="osx-row">
+      <div class="osx-side">
+        <span class="osx-swap" id="osx-sw"><div class="osx-n" id="osx-bn">테마 01 / 07</div><div class="osx-t" id="osx-bt">키치</div><div class="osx-c">12개 디자인</div><div class="osx-d" id="osx-bd"></div></span>
+        <div class="osx-dots" id="osx-dots"></div>
+      </div>
+      <div class="osx-col">
+        <div class="osx-player" id="osx-player"><div class="osx-scene" id="osx-scene"></div>
+          <div class="osx-ctl"><span class="osx-pp"></span><span class="osx-tm" id="osx-tc">0:00</span><span class="osx-trk"><i id="osx-tp"></i></span><span class="osx-tm">2:48</span></div>
+        </div>
+        <div class="osx-more"><span class="osx-ml">이 테마의 다른 자막 바</span><div class="osx-thumbs" id="osx-thumbs"></div></div>
+      </div>
+    </div>
+    <div class="osx-prog"><i id="osx-pg"></i></div>
+  </div>
+</section>
+
+<script id="osx-js">
+(function(){
+var BASE=window.OSX_BASE||'https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@main/hm_';
+function U(n){return BASE+n+'.webp'}
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var MOB=function(){return innerWidth<=760};
+function cl(v,a,b){return v<a?a:v>b?b:v}
+function seg(p,a,b){return cl((p-a)/(b-a),0,1)}
+function spring(t){return t>=1?1:t<=0?0:1-Math.exp(-6.2*t)*Math.cos(8.6*t)}
+function eo(t){return 1-Math.pow(1-t,3)}
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return h>0?cl(-r.top/h,0,1):0}
+
+/* ───── 1) 꾸밈 자막 ───── */
+var fun=document.getElementById('osx-fun'),stage=document.getElementById('osx-stage');
+var panel=stage.querySelector('.osx-panel'),glow=stage.querySelector('.osx-glow');
+panel.src=U('panel_funtext');panel.loading='lazy';
+// [그림, x%, y%, 폭%, 프리셋, 기울기, 넓게] — 한국어·일본어를 양쪽에 섞어요
+var STK=[['f_robot_ko',24,10,19,'track',-3],['f_kayo',50,8,18,'track',2],['f_login',77,11,15,'pop',3],['f_cover',11,28,15,'stamp',-4],['f_folder',6,48,9,'pop',5],['f_heart',20,47,12,'stamp',-3],['f_music',14,67,14,'pop',3],['f_sentai_ko',89,28,16,'stamp',4],['f_jelly',90,49,14,'pop',-5],['f_henshin',85,70,14,'stamp',6],['f_ribbon',8,87,11,'pop',-5],['f_sfx',27,89,15,'stamp',3],['f_lyrics_ko',50,91,24,'wipe',0,1],['f_launch_ko',73,90,15,'stamp',-3],['f_flip',91,88,13,'pop',4]];
+var ORDER=[0,7,3,1,8,4,2,9,5,12,6,10,13,11,14];
+var S=STK.map(function(a,i){
+  var f=a[0],x=a[1],y=a[2],w=a[3],mv=a[4],tilt=a[5],wide=a[6];
+  var s=document.createElement('div');s.className='osx-stk'+(wide?' osx-wide':'');s.style.cssText='left:'+x+'%;top:'+y+'%;width:'+w+'%';
+  var dx=x-50,dy=y-50,len=Math.hypot(dx,dy)||1,o=ORDER.indexOf(i);
+  var inner=mv==='wipe'?'<div class="osx-pre osx-lyr"><img loading="lazy" src="'+U(f+'_0')+'" alt=""><img class="osx-top" loading="lazy" src="'+U(f+'_1')+'" alt=""></div>':'<div class="osx-pre"><img loading="lazy" src="'+U(f)+'" alt=""></div>';
+  s.innerHTML='<div class="osx-fly" style="--mx:'+(i%2?'55vw':'-55vw')+';--fr:'+((dx>0?1:-1)*(14+i%3*7))+'deg;--md:'+(o*0.06).toFixed(2)+'s"><div class="osx-flt" style="--ft:'+(5+i%4)+'s;--fd:'+(-(i*0.7)%5)+'s"><div class="osx-tilt" style="--tilt:'+tilt+'deg">'+inner+'</div></div></div>';
+  stage.appendChild(s);
+  return {el:s,fly:s.querySelector('.osx-fly'),pre:s.querySelector('.osx-pre'),mv:mv,ux:dx/len,uy:dy/len,rot:(dx>0?1:-1)*(16+i%3*8),o:o};
+});
+function preset(s){
+  var p=s.pre,a;
+  if(s.mv==='pop')a=p.animate([{transform:'scale(1)'},{transform:'scale(.82)',offset:.18},{transform:'scale(1.1)',offset:.55},{transform:'scale(.97)',offset:.8},{transform:'scale(1)'}],{duration:720,easing:'cubic-bezier(.3,.7,.4,1)'});
+  else if(s.mv==='stamp')a=p.animate([{transform:'scale(1)',filter:'brightness(1)'},{transform:'scale(1.22)',filter:'brightness(1.5)',offset:.22},{transform:'scale(.95)',filter:'brightness(1.15)',offset:.5},{transform:'scale(1.02) translateX(-2px)',offset:.7},{transform:'scale(1) translateX(1px)',offset:.85},{transform:'none',filter:'none'}],{duration:640,easing:'cubic-bezier(.2,.8,.3,1)'});
+  else if(s.mv==='track')a=p.animate([{transform:'scaleX(1)',filter:'blur(0)'},{transform:'scaleX(1.22)',filter:'blur(5px)',opacity:.75,offset:.3},{transform:'scaleX(.98)',filter:'blur(0)',opacity:1,offset:.75},{transform:'none'}],{duration:900,easing:'cubic-bezier(.2,.8,.2,1)'});
+  else if(s.mv==='wipe'){var t=p.querySelector('.osx-top');t.animate([{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:3200,easing:'linear',fill:'forwards'})}
+}
+function wiggle(s){s.pre.animate([{rotate:'0deg'},{rotate:'-4deg'},{rotate:'3deg'},{rotate:'-2deg'},{rotate:'1deg'},{rotate:'0deg'}],{duration:760,easing:'ease-in-out'})}
+var landed=false,timers=[];
+function land(){if(landed)return;landed=true;fun.classList.add('osx-landed');
+  S.forEach(function(s){timers.push(setTimeout(function(){wiggle(s)},s.o*70));timers.push(setTimeout(function(){preset(s)},s.o*70+820))})}
+function unland(){if(!landed)return;landed=false;fun.classList.remove('osx-landed');timers.forEach(clearTimeout);timers=[];
+  S.forEach(function(s){s.pre.getAnimations().forEach(function(a){a.cancel()});var t=s.pre.querySelector('.osx-top');if(t)t.getAnimations().forEach(function(a){a.cancel()})})}
+stage.addEventListener('mouseover',function(e){var el=e.target.closest&&e.target.closest('.osx-stk');if(!el||!landed||el._h)return;el._h=1;var s=S.filter(function(q){return q.el===el})[0];if(s)preset(s);setTimeout(function(){el._h=0},950)});
+function funFrame(){
+  if(MOB())return;
+  var p=prog(fun);
+  var pp=eo(seg(p,0,.2));
+  panel.style.opacity=pp.toFixed(3);
+  panel.style.transform='translate(-50%,-50%) translate3d(0,'+((1-pp)*60).toFixed(1)+'px,'+((1-pp)*-260).toFixed(0)+'px) rotateX('+((1-pp)*14).toFixed(2)+'deg)';
+  glow.style.opacity=(pp*1).toFixed(3);
+  var W=innerWidth,H=innerHeight;
+  S.forEach(function(s){
+    var a=.08+s.o*.032,t=seg(p,a,a+.3),k=spring(t),r=1-k;
+    // 화면 밖·카메라 가까이(크게)에서 → 제자리로. 움직이는 동안만 살짝 흐림
+    var tx=s.ux*W*.62*r,ty=s.uy*H*.62*r,tz=r*420,rot=s.rot*r,sc=1+r*.35;
+    s.fly.style.transform='translate3d('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px,'+tz.toFixed(0)+'px) rotate('+rot.toFixed(2)+'deg) scale('+sc.toFixed(3)+')';
+    s.fly.style.opacity=cl(t*2.2,0,1).toFixed(3);
+    var b=t>0&&t<1?Math.min(6,Math.abs(r)*9):0;
+    s.fly.style.filter=b>.15?'blur('+b.toFixed(1)+'px)':'none';
+  });
+  if(p>.86)land();else if(p<.8)unland();
+}
+// 휴대폰: 보이면 좌우에서 날아옴
+var mio=new IntersectionObserver(function(es){es.forEach(function(e){if(!MOB())return;var s=S.filter(function(q){return q.el===e.target})[0];if(!s)return;
+  if(e.isIntersecting){s.el.classList.add('osx-in');setTimeout(function(){wiggle(s);setTimeout(function(){preset(s)},800)},1050)}else{s.el.classList.remove('osx-in')}})},{threshold:.35});
+S.forEach(function(s){mio.observe(s.el)});
+
+/* ───── 2) 자막 바 ───── */
+var TH=[['kitsch','키치','#E9FF70','pop','#23251a','파스텔 Y2K — 말풍선 꼬리·구름·티켓·알림 토스트'],['citypop','80s 애니·시티팝','#FF7AC8','track','#251729','80s 셀 애니 — 대사창·다음 회 예고·카세트 라벨'],['sentai','특촬·전대','#FF4A3D','slash','#291515','특촬 히어로 — 사선 대사·경보·본부 통신'],['jump','점프 만화','#FFFFFF','stamp','#1e1e1e','소년 만화 — 말풍선·나레이션 칸·회상 장면'],['usa80','80s 미국','#3FE0FF','shine','#13202b','80s 미국 TV — 크롬 이름·네온·장난감 광고'],['8bit','8비트 게임','#47E36E','steps','#122417','레트로 게임 — 대화창·HP·퀘스트·상점'],['vhs','VHS·84','#FF9A2E','glitch','#271c10','비디오테이프 — 뉴스 자막·터미널·캠코더']];
+var bars=document.getElementById('osx-bars'),pin=bars.querySelector('.osx-pin'),player=document.getElementById('osx-player'),dots=document.getElementById('osx-dots'),thumbs=document.getElementById('osx-thumbs'),sw=document.getElementById('osx-sw');
+document.getElementById('osx-scene').style.backgroundImage='url('+U('scene_01')+')';
+var B=TH.map(function(t,i){var im=document.createElement('img');im.className='osx-bar';im.alt=t[1]+' 테마 자막 바';im.loading='lazy';im.decoding='async';im.src=U('b_'+t[0]);player.insertBefore(im,player.querySelector('.osx-ctl'));
+  dots.insertAdjacentHTML('beforeend','<b style="--c:'+t[2]+'"><i></i>'+t[1]+'</b>');return im});
+var DL=[].slice.call(dots.children);
+DL.forEach(function(d,i){d.addEventListener('click',function(){var h=bars.offsetHeight-innerHeight;scrollTo({top:bars.getBoundingClientRect().top+scrollY+h*((i+.5)/TH.length),behavior:'smooth'})})});
+var IN={
+ pop:[[{transform:'scale(.72)',opacity:0},{transform:'scale(1.05)',opacity:1,offset:.6},{transform:'scale(.99)',offset:.82},{transform:'none',opacity:1}],700,'cubic-bezier(.25,.8,.35,1)'],
+ track:[[{transform:'scaleX(1.28)',filter:'blur(12px)',opacity:0},{transform:'scaleX(.985)',filter:'blur(0)',opacity:1,offset:.7},{transform:'none',filter:'none',opacity:1}],880,'cubic-bezier(.2,.8,.2,1)'],
+ slash:[[{transform:'translate3d(-42%,0,0) skewX(-16deg)',opacity:0,filter:'blur(8px)'},{transform:'translate3d(1.5%,0,0) skewX(3deg)',opacity:1,filter:'blur(0)',offset:.66},{transform:'none',opacity:1,filter:'none'}],720,'cubic-bezier(.2,.9,.3,1)'],
+ stamp:[[{transform:'scale(1.42)',opacity:0,filter:'brightness(2)'},{transform:'scale(.965)',opacity:1,filter:'brightness(1.2)',offset:.55},{transform:'scale(1.01)',offset:.78},{transform:'none',opacity:1,filter:'none'}],560,'cubic-bezier(.2,.8,.3,1)'],
+ shine:[[{transform:'translate3d(10%,0,0)',opacity:0,filter:'brightness(2.4) blur(4px)'},{opacity:1,filter:'brightness(1.6) blur(0)',offset:.5},{transform:'none',opacity:1,filter:'none'}],820,'cubic-bezier(.2,.8,.2,1)'],
+ steps:[[{clipPath:'inset(0 100% 0 0)',opacity:1},{clipPath:'inset(0 0 0 0)',opacity:1}],640,'steps(8,end)'],
+ glitch:[[{opacity:0,transform:'none'},{opacity:1,transform:'translate3d(-12px,2px,0)',filter:'drop-shadow(6px 0 #ff2d55) drop-shadow(-6px 0 #2de0ff)',offset:.12},{opacity:.35,transform:'translate3d(9px,-2px,0)',offset:.26},{opacity:1,transform:'translate3d(-4px,0,0)',filter:'drop-shadow(3px 0 #ff2d55) drop-shadow(-3px 0 #2de0ff)',offset:.42},{transform:'translate3d(2px,1px,0)',offset:.6},{opacity:1,transform:'none',filter:'none'}],720,'steps(1,end)']
+};
+var cur=-1;
+function setTheme(i){
+  if(i===cur)return;var prev=cur;cur=i;var t=TH[i];
+  if(prev>=0){var o=B[prev];o.getAnimations().forEach(function(a){a.cancel()});o.style.opacity=1;
+    o.animate([{opacity:1,transform:'none',filter:'none'},{opacity:0,transform:'translate3d(0,2.5%,0) scale(.985)',filter:'blur(6px)'}],{duration:RM?1:380,easing:'cubic-bezier(.4,0,.6,1)',fill:'forwards'}).onfinish=function(){if(cur!==prev)o.style.opacity=0};}
+  var n=B[i];n.getAnimations().forEach(function(a){a.cancel()});n.style.opacity=1;
+  if(!RM){var e=IN[t[3]];n.animate(e[0],{duration:e[1],easing:e[2],delay:prev>=0?150:0,fill:'backwards'})}
+  B.forEach(function(b,k){if(k!==i&&k!==prev)b.style.opacity=0});
+  DL.forEach(function(d,k){d.classList.toggle('on',k===i)});
+  var dir=prev<0||i>prev?1:-1;
+  var upd=function(){document.getElementById('osx-bn').textContent='테마 '+String(i+1).padStart(2,'0')+' / 07';var bt=document.getElementById('osx-bt');bt.textContent=t[1];bt.style.color=t[2];document.getElementById('osx-bd').textContent=t[5]};
+  if(prev<0||RM)upd();else{sw.getAnimations().forEach(function(a){a.cancel()});sw.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translate3d(0,'+(-10*dir)+'px,0)'}],{duration:200,easing:'ease-in',fill:'forwards'}).onfinish=function(){upd();sw.animate([{opacity:0,transform:'translate3d(0,'+(12*dir)+'px,0)'},{opacity:1,transform:'none'}],{duration:420,easing:'cubic-bezier(.2,.9,.3,1)',fill:'forwards'})}}
+  thumbs.innerHTML=[0,1,2,3].map(function(k){return '<div><img loading="lazy" src="'+U('t_'+t[0]+'_'+k)+'" alt=""></div>'}).join('');
+  [].forEach.call(thumbs.children,function(d,k){setTimeout(function(){d.classList.add('on')},RM?0:90*k+220)});
+  pin.style.setProperty('--osx-g',t[4]);
+}
+var pg=document.getElementById('osx-pg');
+function barsFrame(){var p=prog(bars);setTheme(Math.min(TH.length-1,Math.floor(p*TH.length*.999)));pg.style.transform='scaleX('+p.toFixed(4)+')'}
+
+/* 재생 막대 */
+var tp=document.getElementById('osx-tp'),tc=document.getElementById('osx-tc'),t0=performance.now(),barsVis=false,funVis=false,raf=0;
+function loop(now){raf=0;
+  if(funVis)funFrame();
+  if(barsVis){barsFrame();var s=((now-t0)/1000)%168;tp.style.transform='scaleX('+(s/168).toFixed(4)+')';tc.textContent=Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+  if(funVis||barsVis)raf=requestAnimationFrame(loop)}
+var vio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.target===fun)funVis=e.isIntersecting;else barsVis=e.isIntersecting});if((funVis||barsVis)&&!raf)raf=requestAnimationFrame(loop)},{rootMargin:'200px 0px'});
+vio.observe(fun);vio.observe(bars);
+if(RM){S.forEach(function(s){s.fly.style.opacity=1});panel.style.opacity=1}
+setTheme(0);
+})();
+</script>
+<!-- ▲ osx -->
