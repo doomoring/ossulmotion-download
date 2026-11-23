@@ -147,3 +147,13 @@ html.os-p-guide #contents .xans-mall-faq{display:none!important}
  #header .top_nav_box .top_logo{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:auto!important;margin:0!important;justify-content:center!important;z-index:1}
  #header .top_nav_box .top_logo a{display:block}
 }
+/* 상품 상세 탭 · 리뷰 위젯 */
+#contents .detail_tab{margin-bottom:8px!important}
+#contents .detail_tab ul.title_detail{display:flex!important;gap:0;border:0!important;border-bottom:1px solid var(--os-line)!important;background:transparent!important}
+#contents .detail_tab ul.title_detail li{flex:1 1 0!important;width:auto!important;float:none!important;border:0!important;background:transparent!important;margin:0!important}
+#contents .detail_tab ul.title_detail li a{display:flex!important;align-items:center;justify-content:center;height:58px!important;border:0!important;border-bottom:2px solid transparent!important;margin-bottom:-1px;background:transparent!important;color:var(--os-t2)!important;font-size:15px!important;font-weight:500;transition:color .2s,border-color .2s}
+#contents .detail_tab ul.title_detail li a:hover{color:var(--os-t1)!important}
+#contents .detail_tab ul.title_detail li.tab_open a{color:var(--os-t1)!important;font-weight:700;border-bottom-color:var(--os-g)!important}
+#contents .detail_tab ul.title_detail li a span{margin-left:4px;color:var(--os-t3)!important;font-weight:500}
+iframe.board-review-panel-iframe{background:#F5F5F7!important;border-radius:20px!important;padding:12px 24px!important;box-sizing:border-box!important;margin-top:8px}
+@media (max-width:700px){iframe.board-review-panel-iframe{padding:8px 12px!important;border-radius:16px!important}}
