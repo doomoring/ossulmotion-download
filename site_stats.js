@@ -1,6 +1,6 @@
-/* 오쓸모션 홈페이지 숫자 — 플러그인 업데이트 때 이 값만 바꾸면 사이트 전체에 반영돼요 */
+/* 오쓸모션 홈페이지 숫자 — 플러그인 업데이트 때 이 값만 바꾸면 사이트 전체에 반영돼요 (v4.9.19) */
 window.OS_STATS = {
-  "total": 207,
+  "total": 397,
   "transition": 32,
   "inout": 19,
   "emphasis": 11,
@@ -8,7 +8,8 @@ window.OS_STATS = {
   "loop": 8,
   "variety": 25,
   "text": 36,
-  "funtext": 21,
-  "textbar": 27,
-  "sfx": 37
+  "funtext": 112,
+  "textbar": 111,
+  "sfx": 152,
+  "shape": 15
 };

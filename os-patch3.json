@@ -1,0 +1,107 @@
+{
+"/index.html": [
+{
+"old": "['예능 자막 '+OSN('funtext','21')+'종','글자만 쓰면 예능 프로그램 느낌의 자막이 바로 들어가요. 한 글자씩 등장하는 효과도 골라요.','n05.webp','50% 40%']",
+"new": "['꾸밈 자막 '+OSN('funtext','112')+'종','글자만 쓰면 꾸며진 자막이 바로 들어가요. 색·크기·등장 효과도 그 자리에서 골라요.','n21.webp','50% 40%'],['자막 테마 7종','키치, 80s 애니·시티팝, 특촬, 점프 만화, 80s 미국, 8비트, VHS. 넣기 한 번이면 가로·세로 화면에 맞춰 자리까지 알아서.','n22.webp','50% 40%'],['도형 '+OSN('shape','15')+'종','선·화살표·동그라미를 깔끔한 선 그림으로. 그려지는 애니메이션까지 한 번에.','n23.webp','50% 40%']"
+},
+{
+"old": "['효과음 '+OSN('sfx','37')+'종','모션과 함께 소리까지 한 번에 들어가요.','n10.webp','50% 40%']",
+"new": "['효과음 '+OSN('sfx','152')+'종','트랜지션·임팩트·예능 등 21가지로 나뉜 효과음. 전부 직접 만든 로열티 프리예요.','n24.webp','50% 40%']"
+},
+{
+"old": "['예능 자막',OSN('funtext','21'),'예능에서 자주 보던','예능 자막 스타일']",
+"new": "['꾸밈 자막',OSN('funtext','112'),'테마 7종까지','바로 꾸며지는 자막'],['도형',OSN('shape','15'),'그려지는 선·화살표','동그라미 애니메이션']"
+},
+{
+"old": "['효과음',OSN('sfx','37'),'밋밋한 영상에 딱 맞는','무료 효과음']",
+"new": "['효과음',OSN('sfx','152'),'직접 만든 로열티 프리','효과음 152종']"
+},
+{
+"old": "['예능 자막',OSN('funtext','21')]",
+"new": "['꾸밈 자막',OSN('funtext','112')],['도형',OSN('shape','15')]"
+},
+{
+"old": "{i:'n05.webp',r:1.56}",
+"new": "{i:'n21.webp',r:1.56},{i:'n22.webp',r:1.56}"
+},
+{
+"old": "<li><b>자막 효과 <span data-os=\"text\">36</span> · 자막 바 <span data-os=\"textbar\">27</span></b>글자 길이에 맞춰지는 바와 글자 애니메이션</li>",
+"new": "<li><b>꾸밈 자막 <span data-os=\"funtext\">112</span> · 자막 바 <span data-os=\"textbar\">111</span></b>자막 테마 7종 · 자막 효과 <span data-os=\"text\">36</span> · 도형 <span data-os=\"shape\">15</span></li>"
+},
+{
+"old": "OSN('sfx','37')",
+"new": "OSN('sfx','152')",
+"all": true
+},
+{
+"old": "OSN('textbar','27')",
+"new": "OSN('textbar','111')",
+"all": true
+},
+{
+"old": "data-os=\"sfx\">37<",
+"new": "data-os=\"sfx\">152<",
+"all": true
+},
+{
+"old": "data-os=\"total\">207<",
+"new": "data-os=\"total\">397<",
+"all": true
+},
+{
+"old": "data-n=\"207\"",
+"new": "data-n=\"397\"",
+"all": true
+}
+],
+"/product/detail.html": [
+{
+"old": "<p class=\"eb\">POINT 03 · 예능 자막</p> <h3>글자만 쓰면, 예능 자막.</h3> <p class=\"d\">디자인 <span data-os=\"funtext\">21</span>종 중에 고르면 예능 프로그램 같은 자막이 바로 들어가요. [ ]로 감싼 단어는 강조 색으로, 등장은 한 글자씩 골라 보세요.</p>",
+"new": "<p class=\"eb\">POINT 03 · 꾸밈 자막</p> <h3>글자만 쓰면, 꾸밈 자막.</h3> <p class=\"d\">기본 디자인에 키치·80s 애니·특촬·점프 만화·80s 미국·8비트·VHS 테마 7종까지 <span data-os=\"funtext\">112</span>종. [ ]로 감싼 단어는 강조 색으로, 색·크기·등장도 바로 골라요.</p>"
+},
+{
+"old": "n05.webp\" alt=\"예능 자막 화면\"",
+"new": "n21.webp\" alt=\"꾸밈 자막 화면\""
+},
+{
+"old": "n10.webp\" alt=\"효과음 화면\"",
+"new": "n24.webp\" alt=\"효과음 화면\""
+},
+{
+"old": "트랜지션, 임팩트, 등장 소리를 미리 듣고 재생헤드 위치에 바로 넣기",
+"new": "21가지 태그로 찾고, 미리 듣고, 재생헤드 위치에 바로 넣기"
+},
+{
+"old": "data-os=\"sfx\">37<",
+"new": "data-os=\"sfx\">152<",
+"all": true
+},
+{
+"old": "data-os=\"textbar\">27<",
+"new": "data-os=\"textbar\">111<",
+"all": true
+},
+{
+"old": "data-os=\"total\">207<",
+"new": "data-os=\"total\">397<",
+"all": true
+}
+],
+"/trial.html": [
+{
+"old": "data-os=\"total\">160<",
+"new": "data-os=\"total\">397<",
+"all": true
+},
+{
+"old": "data-os=\"textbar\">16<",
+"new": "data-os=\"textbar\">111<",
+"all": true
+},
+{
+"old": "data-os=\"sfx\">37<",
+"new": "data-os=\"sfx\">152<",
+"all": true
+}
+]
+}
