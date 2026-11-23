@@ -25,15 +25,15 @@
 #contents .xans-order-basketpackage .prdBox .description .info{display:none!important}
 #contents .xans-order-basketpackage .prdBox .quantity{grid-area:qty;position:static!important;display:flex!important;align-items:center;gap:8px;width:auto!important;margin:0!important;padding:0!important;border:0!important}
 #contents .xans-order-basketpackage .prdBox .quantity .label{display:none!important}
-#contents .xans-order-basketpackage .prdBox .quantity > div{display:flex!important;align-items:center;gap:8px;position:static!important;width:auto!important}
+#contents .xans-order-basketpackage .prdBox .quantity > div:not(.displaynone){display:flex!important;align-items:center;gap:8px;position:static!important;width:auto!important}
 #contents .xans-order-basketpackage .prdBox .ec-base-qty{position:relative!important;display:inline-flex!important;align-items:center;width:112px!important;height:40px!important;border:1px solid var(--os-line2)!important;border-radius:999px;overflow:hidden;background:transparent}
-#contents .xans-order-basketpackage .prdBox .ec-base-qty input{width:100%!important;height:38px!important;border:0!important;background:transparent!important;text-align:center;font-size:15px!important;font-weight:600;padding:0 36px!important;border-radius:0!important}
+#contents .xans-order-basketpackage .prdBox .ec-base-qty input{position:absolute!important;left:36px!important;right:36px!important;top:0!important;width:auto!important;height:38px!important;margin:0!important;border:0!important;background:transparent!important;text-align:center;font-size:15px!important;font-weight:600;color:var(--os-t1)!important;padding:0!important;border-radius:0!important}
 #contents .xans-order-basketpackage .prdBox .ec-base-qty a.up,#contents .xans-order-basketpackage .prdBox .ec-base-qty a.down{position:absolute!important;top:0!important;width:36px!important;height:38px!important;border:0!important;background:transparent!important;font-size:0!important;margin:0!important}
 #contents .xans-order-basketpackage .prdBox .ec-base-qty a.down{left:0!important;right:auto!important}
 #contents .xans-order-basketpackage .prdBox .ec-base-qty a.up{right:0!important;left:auto!important}
 #contents .xans-order-basketpackage .prdBox .ec-base-qty a *{display:none!important}
-#contents .xans-order-basketpackage .prdBox .ec-base-qty a.down::before,#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::before,#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::after{content:'';position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--os-t1);transform:translate(-50%,-50%)}
-#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::after{transform:translate(-50%,-50%) rotate(90deg)}
+#contents .xans-order-basketpackage .prdBox .ec-base-qty a.down::before,#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::before,#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::after{content:''!important;position:absolute!important;left:50%!important;top:50%!important;right:auto!important;bottom:auto!important;width:11px!important;height:1.5px!important;margin:0!important;border:0!important;background:var(--os-t1)!important;transform:translate(-50%,-50%)!important}
+#contents .xans-order-basketpackage .prdBox .ec-base-qty a.up::after{transform:translate(-50%,-50%) rotate(90deg)!important}
 #contents .xans-order-basketpackage .prdBox .btnNormal.sizeQty{height:40px!important;line-height:38px!important;padding:0 16px!important;font-size:13px!important}
 #contents .xans-order-basketpackage .prdBox .sumPrice,#contents .xans-order-basketpackage .prdBox .buttonGroup{display:none!important}
 #contents .xans-order-basketpackage .ec-base-prdInfo .btnDelete{position:absolute!important;right:20px!important;top:50%!important;transform:translateY(-50%);width:32px!important;height:32px!important;border-radius:50%;background:transparent!important;font-size:0!important;border:0!important;opacity:.6;transition:opacity .2s,background .2s}
@@ -56,7 +56,7 @@
 #contents .xans-order-totalsummary .total{display:flex!important;align-items:baseline;justify-content:space-between;padding:18px 0 0!important;margin:0!important;border-top:1px solid var(--os-line)!important}
 #contents .xans-order-totalsummary .total .title{font-size:16px!important;font-weight:700!important;color:var(--os-t1)!important}
 #contents .xans-order-totalsummary .paymentPrice,#contents .xans-order-totalsummary .paymentPrice *{font-size:30px!important;font-weight:800!important;letter-spacing:-.03em;color:var(--os-t1)!important}
-#contents .xans-order-totalsummary .paymentPrice span.notranslate:last-child{font-size:16px!important;font-weight:600!important;margin-left:2px}
+#contents .xans-order-totalsummary .paymentPrice > span.notranslate{font-size:16px!important;font-weight:600!important;margin-left:2px}
 #contents #orderFixItem{margin:24px 0 0!important;padding:0!important;border:0!important;background:transparent!important}
 #contents #orderFixItem .ec-base-button{padding:0!important;margin:0!important}
 #contents #orderFixItem .btnSubmit{display:flex!important;align-items:center;justify-content:center;height:58px!important;font-size:0!important;border-radius:999px!important}
@@ -113,3 +113,6 @@
 #contents .myshopArea .prdBox .buttonGroup{grid-column:1 / -1;justify-content:flex-end}
 #contents .myshopArea .ec-base-prdInfo .btnDelete{top:16px!important;transform:none}
 }
+
+#wrap #contents .xans-order-basketpackage .ec-base-prdInfo,#wrap #contents .xans-order-basketpackage .cart-product .contents,#wrap #contents .xans-order-basketpackage .xans-order-emptyitem{background:transparent!important}
+#wrap #contents .xans-order-basketpackage .ec-base-prdInfo .prdBox{background:var(--os-bg2)!important}
