@@ -114,5 +114,5 @@
 #contents .myshopArea .ec-base-prdInfo .btnDelete{top:16px!important;transform:none}
 }
 
-#wrap #contents .xans-order-basketpackage .ec-base-prdInfo,#wrap #contents .xans-order-basketpackage .cart-product .contents,#wrap #contents .xans-order-basketpackage .xans-order-emptyitem{background:transparent!important}
+html body #wrap #contents .xans-order-basketpackage .cart-product .ec-base-prdInfo.gCheck,html body #wrap #contents .xans-order-basketpackage .cart-product .xans-order-emptyitem > .contents,html body #wrap #contents .xans-order-basketpackage .cart-product .xans-order-emptyitem{background:transparent!important;background-color:transparent!important}
 #wrap #contents .xans-order-basketpackage .ec-base-prdInfo .prdBox{background:var(--os-bg2)!important}

@@ -25,6 +25,7 @@ function run(){
   var g=$('#contents .xans-order-basketguide');var so=$('#contents .xans-order-selectorder');if(g&&!$('#contents .os-guide')){var d=document.createElement('div');d.className='os-guide';d.innerHTML='<h3>구매 안내</h3><ul><li>결제가 끝나면 주문할 때 입력한 이메일로 라이선스 키가 바로 발송돼요.</li><li>키 1개는 컴퓨터 1대에서 쓸 수 있고, 이용 기간은 키를 처음 입력한 날부터 시작돼요.</li><li>키를 입력하기 전이라면 받은 날부터 7일 안에 전액 환불받을 수 있어요.</li><li>구매 전에 30일 무료 체험으로 먼저 써 볼 수 있어요.</li></ul>';if(so&&so.parentNode)so.parentNode.insertBefore(d,so.nextSibling);else g.parentNode.insertBefore(d,g)}}
  /* 장바구니 재디자인 보조 */
  if(/\/order\/basket/.test(location.pathname)){
+  $$('#contents .cart-product .xans-order-emptyitem, #contents .cart-product .xans-order-emptyitem > .contents, #contents .xans-order-basketpackage .ec-base-prdInfo').forEach(function(e){e.style.setProperty('background-color','transparent','important');e.style.setProperty('border-color','transparent','important')});
   $$('#contents .prdBox .prdName').forEach(function(n){if(n.parentNode.querySelector('.os-sub'))return;var m=txt(n).match(/(\d+)\s*개월/);var d={1:30,3:90,6:180,12:365}[m&&m[1]];var s=document.createElement('span');s.className='os-sub';s.textContent=(d?d+'일 이용권 · ':'')+'키 1개 = 컴퓨터 1대';n.parentNode.insertBefore(s,n.nextSibling)});
   var fi=$('#contents #orderFixItem');if(fi&&!$('#contents .os-paynote')){var u=document.createElement('ul');u.className='os-paynote';u.innerHTML='<li>결제가 끝나면 이메일로 라이선스 키가 바로 와요</li><li>이용 기간은 키를 처음 입력한 날부터 시작돼요</li><li>자동 결제가 아니에요</li>';fi.parentNode.insertBefore(u,fi.nextSibling)}
  }
