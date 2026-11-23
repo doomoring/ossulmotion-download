@@ -155,3 +155,10 @@ li:has(> a[href*="/board/자유게시판/"]),li:has(> a[href*="/board/갤러리/
 
 @media (max-width:1280px){#contents .os-guide{margin:40px 20px 0}}
 @media (max-width:700px){#contents .os-guide{margin:32px 16px 0;padding:22px 20px}}
+/* 장바구니 세부 */
+#contents .xans-order-totalsummary .totalSummary__item.shipping,#contents .xans-order-totalsummary .shipping{display:none!important}
+#contents .cart-product .xans-order-emptyitem > .title{padding:22px 24px 6px!important}
+#contents .cart-product .xans-order-emptyitem > .title h3{font-size:17px!important;font-weight:700}
+#contents .xans-order-normtitle{padding:0 24px!important}
+#contents .xans-order-normtitle h4{font-size:13px!important;color:var(--os-t3)!important;font-weight:500}
+#contents .xans-order-selectorder{padding:16px 24px 22px!important}
