@@ -141,3 +141,9 @@ html.os-p-guide #contents .xans-mall-faq{display:none!important}
 /* 적립금 요약 */
 #contents .xans-myshop-summary.ec-base-box{border-radius:20px!important}
 @media (max-width:700px){#contents .ec-base-help:not(.xans-order-basketguide){margin:32px 0 0!important;padding:20px!important}}
+/* 모바일 헤더 로고 정중앙 */
+@media (max-width:1023px){
+ #header .top_nav_box{position:relative!important}
+ #header .top_nav_box .top_logo{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:auto!important;margin:0!important;justify-content:center!important;z-index:1}
+ #header .top_nav_box .top_logo a{display:block}
+}

@@ -26,8 +26,8 @@ function run(){
  /* 장바구니 재디자인 보조 */
  if(/\/order\/basket/.test(location.pathname)){
   $$('#contents .cart-product .xans-order-emptyitem, #contents .cart-product .xans-order-emptyitem > .contents, #contents .xans-order-basketpackage .ec-base-prdInfo').forEach(function(e){e.style.setProperty('background-color','transparent','important');e.style.setProperty('border-color','transparent','important')});
-  $$('#contents .prdBox .prdName').forEach(function(n){if(n.parentNode.querySelector('.os-sub'))return;var m=txt(n).match(/(\d+)\s*개월/);var d={1:30,3:90,6:180,12:365}[m&&m[1]];var s=document.createElement('span');s.className='os-sub';s.textContent=(d?d+'일 이용권 · ':'')+'키 1개 = 컴퓨터 1대';n.parentNode.insertBefore(s,n.nextSibling)});
-  var fi=$('#contents #orderFixItem');if(fi&&!$('#contents .os-paynote')){var u=document.createElement('ul');u.className='os-paynote';u.innerHTML='<li>결제가 끝나면 이메일로 라이선스 키가 바로 와요</li><li>이용 기간은 키를 처음 입력한 날부터 시작돼요</li><li>자동 결제가 아니에요</li>';fi.parentNode.insertBefore(u,fi.nextSibling)}
+  $$('#contents .prdBox .prdName').forEach(function(n){if(n.parentNode.querySelector('.os-sub'))return;var s=document.createElement('span');s.className='os-sub';s.textContent='매달 자동 결제 · 언제든 해지 · 키 1개 = 컴퓨터 1대';n.parentNode.insertBefore(s,n.nextSibling)});
+  var fi=$('#contents #orderFixItem');if(fi&&!$('#contents .os-paynote')){var u=document.createElement('ul');u.className='os-paynote';u.innerHTML='<li>결제될 때마다 30일 라이선스 키가 이메일로 와요</li><li>매달 같은 금액이 자동 결제돼요</li><li>마이쇼핑 &gt; 정기배송 관리에서 언제든 해지</li>';fi.parentNode.insertBefore(u,fi.nextSibling)}
  }
  /* 할인 없는 상품의 줄 그은 가격 숨김 */
  $$('#contents .description, #contents .prdBox, #contents .xans-record-').forEach(function(box){var s=$$('del, strike, .strike, [style*="line-through"]',box);s.forEach(function(el){var v=txt(el).replace(/\D/g,'');if(!v)return;var others=$$('li,span,strong,p,div',box).filter(function(o){return o!==el&&!o.contains(el)&&!el.contains(o)&&o.children.length===0&&txt(o).replace(/\D/g,'')===v});if(others.length)el.classList.add('os-same')})});
