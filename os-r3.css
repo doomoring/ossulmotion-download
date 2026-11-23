@@ -102,3 +102,25 @@ html.os-board-empty #contents .ec-base-table .message{padding:64px 0!important}
 #contents .os-gd a{color:var(--os-g)}
 @media (max-width:1023px){#contents .os-gd{margin:0}#contents .os-gd section{padding:22px 20px}#contents .os-gd li{font-size:14px}}
 html.os-p-guide #contents .xans-mall-faq{display:none!important}
+@media (max-width:700px){#contents .os-qa-head{margin:-4px 16px 28px!important}#contents .os-qa-head p{font-size:14px!important}}
+#contents .login__util > div:last-child{width:100%!important}
+/* 마이쇼핑 */
+#contents .xans-myshop-asyncbankbook{border:0!important;background:transparent!important}
+#contents .xans-myshop-orderhistorytab ul{display:flex!important;gap:8px;border:0!important;background:transparent!important}
+#contents .xans-myshop-orderhistorytab li{flex:none!important;width:auto!important;border:0!important;background:transparent!important;margin:0!important}
+#contents .xans-myshop-orderhistorytab li a{display:inline-flex!important;align-items:center;height:40px!important;padding:0 18px!important;border:1px solid var(--os-line)!important;border-radius:999px!important;background:transparent!important;color:var(--os-t2)!important;font-size:14px!important;line-height:1!important}
+#contents .xans-myshop-orderhistorytab li.selected a{border-color:var(--os-g)!important;color:var(--os-g)!important;background:rgba(47,211,107,.08)!important;font-weight:600}
+#contents .xans-myshop-orderhistorytab li a::after,#contents .xans-myshop-orderhistorytab li::after{display:none!important}
+#contents .xans-myshop-orderhistoryhead fieldset{border-radius:18px!important;padding:20px 22px!important}
+#contents .xans-myshop-orderhistoryhead .period{display:inline-flex!important;gap:6px}
+#contents .xans-myshop-orderhistoryhead .period a{margin:0!important}
+#contents .xans-myshop-orderhistoryhead ul,#contents .xans-myshop-orderhistoryhead p{margin-top:14px!important;font-size:13px!important;line-height:1.7!important;color:var(--os-t3)!important}
+#contents .xans-myshop-orderhistoryhead ul li{color:var(--os-t3)!important}
+#contents .xans-myshop-orderhistorytab{background:transparent!important;border:0!important}
+#contents .xans-myshop-orderhistoryhead fieldset{display:flex!important;flex-wrap:wrap;align-items:center;gap:10px 12px}
+#contents .xans-myshop-orderhistoryhead fieldset .date{display:inline-flex!important;align-items:center;gap:6px;margin:0!important}
+#contents .xans-myshop-orderhistoryhead fieldset .date input[type=text]{width:118px!important}
+#contents .xans-myshop-orderhistoryhead fieldset > *{margin:0!important}
+#contents .xans-myshop-orderhistoryhead .txtList{padding-left:4px!important}
+#contents .xans-myshop-orderhistoryhead .txtList li{font-size:13px!important;color:var(--os-t3)!important}
+@media (max-width:1023px){#contents .xans-myshop-orderhistoryhead fieldset .date{flex-wrap:wrap}#contents .xans-myshop-orderhistoryhead fieldset .date input[type=text]{width:108px!important}}

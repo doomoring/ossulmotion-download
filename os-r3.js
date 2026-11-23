@@ -39,3 +39,6 @@ function r3(){
 }
 if(document.readyState!=='loading')r3();document.addEventListener('DOMContentLoaded',r3);window.addEventListener('load',r3);setTimeout(r3,1200);
 })();
+(function(){function f(){[].slice.call(document.querySelectorAll('#contents .xans-myshop-orderhistorytab, #contents .xans-myshop-orderhistorytab ul, #contents .xans-myshop-orderhistorytab li')).forEach(function(e){e.style.setProperty('background-color','transparent','important');e.style.setProperty('border-color','transparent','important')});
+[].slice.call(document.querySelectorAll('#contents .xans-myshop-orderhistoryhead fieldset')).forEach(function(e){e.style.setProperty('background-color','#1D1E22','important');e.style.setProperty('border-color','#2A2B31','important')})}
+if(document.readyState!=='loading')f();document.addEventListener('DOMContentLoaded',f);window.addEventListener('load',f);setTimeout(f,1200)})();
