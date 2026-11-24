@@ -28,7 +28,7 @@ var MAP={'배송준비중':'결제 완료 · 키 발송됨','배송전':'결제 
 function run(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,list=[];while(n=w.nextNode())list.push(n);
 list.forEach(function(t){var s=t.nodeValue,k=s.trim();if(!k)return;
 if(MAP[k]){window.__osPaid=1;t.nodeValue=s.replace(k,MAP[k]);return}
-if(k.indexOf('배송비')>=0){var r=s.replace(/\+\s*지역별\s*배송비\s*[0-9,]*/g,'').replace(/\+\s*배송비\s*[0-9,]*/g,'');if(r!==s)t.nodeValue=r}
+if(k.indexOf('배송비')>=0){var r=s.replace(/\+\s*지역별\s*배송비\s*[0-9,]*/g,'').replace(/\+\s*배송비\s*[0-9,]*/g,'');if(r!==s){t.nodeValue=r;var nx=t.nextSibling;while(nx&&nx.nodeType===3&&!nx.nodeValue.trim())nx=nx.nextSibling;if(nx&&nx.nodeType===1&&/^[0-9,]+(\uC6D0)?$/.test(nx.textContent.trim()))nx.classList.add('os-mhide')}}
 if(/^배송\s*:/.test(k)){var li=t.parentElement&&t.parentElement.closest('li');if(li)li.classList.add('os-mhide')}});
 [].forEach.call(document.querySelectorAll('li'),function(li){if(/^\s*배송\s*:/.test(li.textContent))li.classList.add('os-mhide')});
 [].forEach.call(document.querySelectorAll('.ec-base-fold'),function(f){var h=f.querySelector('.title h3');if(!h||h.textContent.trim().indexOf('받는 분')!==0)return;
