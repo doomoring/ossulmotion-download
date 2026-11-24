@@ -22,3 +22,18 @@ function go(id){var e=document.getElementById(id);if(e&&!stop)e.scrollIntoView({
 function chase(id){stop=false;[0,200,600,1200,2000,3000,4500].forEach(function(t){setTimeout(function(){go(id)},t)});addEventListener('load',function(){go(id)});setTimeout(function(){['wheel','touchstart','keydown'].forEach(function(v){addEventListener(v,mark,{passive:true,once:true})})},50)}
 if(location.hash.length>1)chase(decodeURIComponent(location.hash.slice(1)));
 document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');if(h.indexOf('/#')!==0&&h.indexOf('#')!==0)return;var id=h.slice(h.indexOf('#')+1);if(!id||!document.getElementById(id))return;ev.preventDefault();try{history.replaceState(null,'','/#'+id)}catch(e){}chase(id)},true)}catch(e){}})();
+;(function(){if(location.pathname.indexOf('/myshop/order/')!==0)return;
+var st=document.createElement('style');st.textContent='.os-mhide{display:none!important}.xans-myshop-orderhistorydetail .ec-base-fold>.title{padding-left:24px!important;padding-right:24px!important}.xans-myshop-orderhistorydetail .ec-base-fold>.title:after,.xans-myshop-orderhistorydetail .ec-base-fold>.title .icoArrow{right:24px!important}#os-refund{margin:24px 0;padding:22px 24px;border:1px solid #2A2B31;border-radius:16px;background:#1D1E22;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}#os-refund b{display:block;color:#EDEDED;font-size:15px;margin-bottom:4px}#os-refund span{color:#8E8E93;font-size:13px;line-height:1.5}#os-refund a{display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid #2FD36B;color:#2FD36B!important;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}#os-refund a:hover{background:rgba(47,211,107,.12)}';(document.head||document.documentElement).appendChild(st);
+var MAP={'배송준비중':'결제 완료 · 키 발송됨','배송전':'결제 완료','배송대기':'결제 완료 · 키 발송됨','배송완료':'이용 중'};
+function run(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,list=[];while(n=w.nextNode())list.push(n);
+list.forEach(function(t){var s=t.nodeValue,k=s.trim();if(!k)return;
+if(MAP[k]){t.nodeValue=s.replace(k,MAP[k]);return}
+if(k.indexOf('배송비')>=0){var r=s.replace(/\+\s*지역별\s*배송비\s*[0-9,]*/g,'').replace(/\+\s*배송비\s*[0-9,]*/g,'');if(r!==s)t.nodeValue=r}
+if(/^배송\s*:/.test(k)){var li=t.parentElement&&t.parentElement.closest('li');if(li)li.classList.add('os-mhide')}});
+[].forEach.call(document.querySelectorAll('li'),function(li){if(/^\s*배송\s*:/.test(li.textContent))li.classList.add('os-mhide')});
+[].forEach.call(document.querySelectorAll('.ec-base-fold'),function(f){var h=f.querySelector('.title h3');if(!h||h.textContent.trim().indexOf('받는 분')!==0)return;
+[].forEach.call(f.querySelectorAll('tr'),function(tr){var th=tr.querySelector('th'),td=tr.querySelector('td');if(!th)return;var x=th.textContent.trim();if(/일반전화|주소|배송|희망/.test(x)||(td&&!td.textContent.trim()))tr.classList.add('os-mhide')})});
+var d=document.querySelector('.xans-myshop-orderhistorydetail');if(d&&!document.getElementById('os-refund')){var on='';var m=document.body.innerText.match(/[0-9]{8}-[0-9]{7}/);if(m)on=m[0];
+var box=document.createElement('div');box.id='os-refund';box.innerHTML='<div><b>환불이 필요하신가요?</b><span>주문번호와 함께 문의해 주시면 확인 후 빠르게 처리해 드려요.</span></div><a href="mailto:help@1053studio.co.kr?subject='+encodeURIComponent('[환불 신청] 주문번호 '+on)+'">환불 신청하기</a>';
+var folds=d.querySelectorAll('.ec-base-fold');var first=folds[0];if(first&&first.parentNode)first.parentNode.insertBefore(box,folds[1]||null);else d.appendChild(box)}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();setTimeout(run,800);setTimeout(run,2000)})();
