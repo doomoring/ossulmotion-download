@@ -49,7 +49,7 @@ var css='html #os-landing .sticky,html #osx-fun .osx-pin,html #osx-bars .osx-pin
 +'@media (max-width:760px){html #os-landing #p2 .sticky{padding-top:calc(var(--os-hh,0px) + 8px)!important}html #os-landing #seq .sq-head{top:calc(var(--os-hh,0px) + 8px)!important}#os-top{width:40px!important;height:40px!important;opacity:.82}}'
 +'.xans-layout-mobileaction a{font-size:0!important;line-height:0!important}'
 +'#prdQnA #qna.pdt150{padding-top:40px!important}'
-+'.orderList .order .ec-base-prdInfo{padding-top:12px!important}.orderList .order .ec-base-button.gMColumn{margin:0!important}.orderList .order+.order{margin-top:28px!important}'
++'.orderList .order .ec-base-prdInfo{padding-top:12px!important}.orderList .order .ec-base-button.gMColumn{display:none!important}.orderList .order{margin-bottom:0!important}.orderList .order+.order{margin-top:28px!important}.orderList .order+.order .order__number{margin-top:0!important}'
 +'.xans-myshop-orderhistorydetail .ec-base-prdInfo{padding-top:12px!important}'
 +'.ec-orderform-NoMemberPasswdRow::before{background:#2A2B31!important}'
 +'tr.discountView,#ec-shop-confirm_total_sale_area2{display:none!important}'
