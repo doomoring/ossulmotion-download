@@ -1,0 +1,10 @@
+(function(){var C='https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@e08e1b3/',F='https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4aadadc/';
+var P=location.pathname;var STU=(P.indexOf('/about.html')===0||P.indexOf('/contact.html')===0);
+var st=document.createElement('style');st.textContent='#os-nav a.on{color:#2FD36B!important}#header .xans-layout-logotop img{width:auto!important;object-fit:contain}';document.head.appendChild(st);
+function logo(){var s=STU?C+'hm_logo_1053.png':C+'hm_logo_ossmo.png';[].forEach.call(document.querySelectorAll('.xans-layout-logotop img'),function(im){if(im.getAttribute('data-os')!==s){im.removeAttribute('srcset');im.src=s;im.setAttribute('data-os',s);im.alt=STU?'1053 Studio':'ossulmotion'}});
+ [].forEach.call(document.querySelectorAll('.xans-layout-logotop a'),function(a){a.setAttribute('href',STU?'/about.html':'/')})}
+function fav(){var h=STU?F+'hm_fav_1053.png':C+'hm_fav_o.png';[].forEach.call(document.querySelectorAll('link[rel~=icon],link[rel=apple-touch-icon]'),function(l){l.parentNode.removeChild(l)});var l=document.createElement('link');l.rel='icon';l.type='image/png';l.href=h;document.head.appendChild(l);var a=document.createElement('link');a.rel='apple-touch-icon';a.href=h;document.head.appendChild(a)}
+function nav(){var n=document.getElementById('os-nav');if(n&&!n.getAttribute('data-v2')){n.setAttribute('data-v2','1');n.innerHTML='<a href="/#p1">기능 소개</a><a href="/#os-start">가격</a><a href="/about.html">Work</a><a href="/contact.html">Contact</a>';[].forEach.call(n.querySelectorAll('a'),function(a){var h=a.getAttribute('href');if(STU&&P.indexOf(h)===0)a.classList.add('on')})}}
+function sns(){['https://instagram.com/','https://youtube.com/','https://facebook.com/','https://twitter.com/','https://blog.naver.com/','https://pf.kakao.com/'].forEach(function(u){[].forEach.call(document.querySelectorAll('a[href="'+u+'"]'),function(a){var li=a.closest('li')||a;li.style.display='none'})})}
+function run(){logo();nav();sns()}
+fav();run();document.addEventListener('DOMContentLoaded',run);addEventListener('load',run);setTimeout(run,800);setTimeout(run,2500)})();
