@@ -3,7 +3,7 @@ function cl(v,a,b){return v<a?a:v>b?b:v}function seg(p,a,b){return cl((p-a)/(b-a
 function Q(i){return document.getElementById(i)}
 function spr(u,k,w){if(u<=0)return 0;if(u>=2)return 1;k=k||6;w=w||9;return 1-Math.exp(-k*u)*Math.cos(w*u)}
 function lerp(a,b,u){return a+(b-a)*u}
-var CDN='https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@d2784b2/';
+var CDN='https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@ae7e61b/';
 var FL=[["o",22,257,231,238],["s",246,260,194,237],["s",435,261,192,236],["u",625,261,204,235],["l",829,189,107,308],["m",935,259,304,235],["o",1234,258,231,238],["t",1446,197,178,300],["i",1615,191,101,306],["o",1709,258,226,238],["n",1930,258,220,235]];
 var SL=[["o",176,176,377,380],["s",533,177,310,375],["s",832,177,304,375],["m",1132,177,488,375],["o",1617,175,379,381]];
 var KEEP=[0,1,2,3,4,5,6],DROP=[7,8,9,10];
