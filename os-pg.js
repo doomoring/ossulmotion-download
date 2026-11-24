@@ -1,17 +1,17 @@
 /* PG 심사용: 정기결제 문구를 1개월 단건 결제로 바꿔 보여 줌. 원래 문구는 스킨·관리자에 그대로 있음 → 이 스크립트 한 줄만 빼면 원래대로 돌아감 */
 (function(){
-var H='__HIDE__';
+window.OS_PG=1;var H='__HIDE__';var HT={'30일 무료로 써 보고, 마음에 들면 월 이용권으로 계속 쓰세요.':'<b style="color:#2FD36B;font-weight:600">30일 무료,</b> 마음에 들면 이용권으로 계속 쓰세요.'};
 var R=[
 ['eq','정기결제','1회 결제'],
 ['eq','월 정기결제','1개월 이용권 (1회 결제)'],
 ['eq','오쓸모션 월 이용권','오쓸모션 1개월 이용권'],
 ['eq','/ 월','/ 1개월'],
-['eq','매달 자동 결제 · 언제든 해지 · 위약금 없음','한 번 결제 · 30일 이용 · 자동 결제 없음'],
+['eq','매달 자동 결제 · 언제든 해지 · 위약금 없음','30일 이용 · 자동 결제 없음'],
 ['eq','매달 자동 결제 · 언제든 해지 · 키 1개 = 컴퓨터 1대','1회 결제 · 30일 이용 · 키 1개 = 컴퓨터 1대'],
 ['eq','월 7,900원 · 매달 자동 결제 · 언제든 해지','7,900원 · 1개월(30일) 이용 · 자동 결제 없음'],
 ['eq','월 이용권 구매','1개월 이용권 구매'],
 ['eq','언제든 해지','자동 결제 없음'],
-['eq','30일 무료로 써 보고, 마음에 들면 월 이용권으로 계속 쓰세요.','30일 무료로 써 보고, 마음에 들면 1개월 이용권으로 계속 쓰세요.'],
+['eq','체험은 카드 등록 없이 이메일로 시작해요','카드 등록 없이 무료 체험을 시작하세요.'],
 ['pre','키는 첫 결제 때 한 번만 와요 · 다음 달부터','결제하면 이메일로 키가 바로 와요 · 키를 처음 입력한 날부터 30일 · 자동 결제 없음 · 키 입력 전 7일 안 전액 환불'],
 ['eq','첫 결제 때 키 발송 · 다음 달부터 같은 키 30일씩 자동 연장','결제 즉시 이메일로 키 발송 · 키 입력한 날부터 30일'],
 ['eq','마이쇼핑 > 정기배송 관리에서 언제든 해지','자동 결제 없이 한 번만 결제돼요'],
@@ -56,6 +56,7 @@ var R=[
 ];
 function hideFor(n){var p=n.parentElement;if(!p)return;var d=p.closest('details');if(d){d.style.display='none';return}var b=p.closest('li,p,tr,dl,dd,dt')||p;if(b.tagName==='DD'||b.tagName==='DT'){var dl=b.parentElement;if(dl&&dl.children.length<=2)b=dl}b.style.display='none';b.setAttribute('data-os-pg','h')}
 function fix(n){var v=n.nodeValue;if(!v)return;var t=v.trim();if(!t)return;var p=n.parentElement;if(!p||/^(SCRIPT|STYLE|TEXTAREA|NOSCRIPT)$/.test(p.tagName))return;
+ if(HT[t]&&p.childNodes.length===1){p.innerHTML=HT[t];return}
  for(var i=0;i<R.length;i++){var r=R[i];
   if(r[0]==='eq'&&t===r[1]){if(r[2]===H){hideFor(n);return}n.nodeValue=v.replace(t,r[2]);return}
   if(r[0]==='pre'&&t.indexOf(r[1])===0){if(r[2]===H){hideFor(n);return}n.nodeValue=v.replace(t,r[2]);return}
