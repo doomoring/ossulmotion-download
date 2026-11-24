@@ -1,0 +1,116 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="os-contact">
+<style>
+#os-contact{--g:#2FD36B;max-width:1180px;margin:0 auto;padding:100px 24px 140px;color:#F5F5F7;word-break:keep-all;text-align:left}
+#os-contact *{box-sizing:border-box}
+#os-contact .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+#os-contact .eb{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--g);margin:0 0 22px}
+#os-contact .eb:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px rgba(47,211,107,.18)}
+#os-contact .lf{position:sticky;top:120px}
+#os-contact .lf img.lg{height:30px;width:auto;display:block;margin:0 0 30px}
+#os-contact h1{font-size:clamp(38px,5vw,66px);font-weight:700;letter-spacing:-.045em;line-height:1.1;margin:0;color:#F5F5F7}
+#os-contact h1 em{font-style:normal;color:var(--g)}
+#os-contact .lead{font-size:clamp(16px,1.4vw,18px);color:#A1A1A6;line-height:1.75;margin:26px 0 34px}
+#os-contact .sv{list-style:none;margin:0 0 40px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+#os-contact .sv li{font-size:13px;color:#D2D2D7;padding:7px 13px;border-radius:999px;background:#1D1E22;border:1px solid #2A2B31}
+#os-contact .inf{border-top:1px solid #2A2B31;padding-top:24px;display:grid;gap:14px}
+#os-contact .inf div{display:flex;gap:16px;font-size:14px;line-height:1.5}
+#os-contact .inf b{width:72px;flex:0 0 72px;color:#6E6E73;font-weight:500}
+#os-contact .inf span,#os-contact .inf a{color:#D2D2D7;text-decoration:none}
+#os-contact .inf a:hover{color:var(--g)}
+#os-contact .fm{position:relative;background:#1D1E22;border:1px solid #2A2B31;border-radius:24px;padding:40px 38px 36px;overflow:hidden}
+#os-contact .fm:after{content:"";position:absolute;right:-140px;top:-140px;width:340px;height:340px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,211,107,.13),transparent);pointer-events:none}
+#os-contact .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#os-contact .f{position:relative;margin:0 0 14px}
+#os-contact .f label{display:block;font-size:13px;color:#A1A1A6;margin:0 0 8px;font-weight:500}
+#os-contact .f label i{font-style:normal;color:var(--g);margin-left:3px}
+#os-contact .f input,#os-contact .f textarea{width:100%;height:52px;padding:0 16px;border-radius:12px;border:1px solid #2F3036;background:#17181B;color:#F5F5F7;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+#os-contact .f textarea{height:150px;padding:14px 16px;line-height:1.65;resize:vertical}
+#os-contact .f input::placeholder,#os-contact .f textarea::placeholder{color:#55575E}
+#os-contact .f input:focus,#os-contact .f textarea:focus{border-color:var(--g);box-shadow:0 0 0 4px rgba(47,211,107,.14)}
+#os-contact .f.bad input,#os-contact .f.bad textarea{border-color:#FF6B6B!important}
+#os-contact .ch{display:flex;flex-wrap:wrap;gap:8px}
+#os-contact .ch button{height:40px;padding:0 15px;border-radius:999px;border:1px solid #2F3036;background:#17181B;color:#D2D2D7;font-size:14px;font-family:inherit;cursor:pointer;transition:all .18s}
+#os-contact .ch button:hover{border-color:#4A4C54}
+#os-contact .ch button.on{background:rgba(47,211,107,.12);border-color:var(--g);color:var(--g)}
+#os-contact .ag{display:flex;align-items:flex-start;gap:10px;margin:18px 0 22px;font-size:13px;line-height:1.6;color:#8E8E93;cursor:pointer}
+#os-contact .ag input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:0 0 20px;margin:1px 0 0;border-radius:6px;border:1px solid #3A3C43;background:#17181B;cursor:pointer;display:grid;place-items:center;transition:all .15s}
+#os-contact .ag input:checked{background:var(--g);border-color:var(--g)}
+#os-contact .ag input:checked:after{content:"";width:5px;height:10px;border:solid #0B0C0E;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+#os-contact .ag.bad input{border-color:#FF6B6B}
+#os-contact .ag a{color:#D2D2D7;text-decoration:underline}
+#os-contact .sb{width:100%;height:58px;border:0;border-radius:999px;background:var(--g);color:#0B0C0E;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .2s,box-shadow .2s,opacity .2s}
+#os-contact .sb:hover{transform:translateY(-2px);box-shadow:0 16px 40px -14px rgba(47,211,107,.65)}
+#os-contact .sb[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}
+#os-contact .sb .sp{width:18px;height:18px;border-radius:50%;border:2px solid rgba(11,12,14,.25);border-top-color:#0B0C0E;animation:osSp .7s linear infinite;display:none}
+#os-contact .sb.ld .sp{display:block}
+@keyframes osSp{to{transform:rotate(360deg)}}
+#os-contact .ms{min-height:22px;margin:14px 0 0;font-size:14px;color:#FF8A8A;text-align:center}
+#os-contact .ms a{color:#F5F5F7}
+#os-contact .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#os-contact .ok{display:none;text-align:center;padding:70px 10px 60px}
+#os-contact .fm.done form{display:none}
+#os-contact .fm.done .ok{display:block;animation:osIn .6s cubic-bezier(.2,.7,.2,1)}
+#os-contact .ok .ck{width:76px;height:76px;margin:0 auto 26px;border-radius:50%;background:rgba(47,211,107,.14);display:grid;place-items:center}
+#os-contact .ok .ck:after{content:"";width:16px;height:30px;border:solid var(--g);border-width:0 4px 4px 0;transform:translateY(-4px) rotate(45deg)}
+#os-contact .ok h2{font-size:28px;font-weight:700;letter-spacing:-.03em;margin:0 0 12px}
+#os-contact .ok p{font-size:16px;color:#A1A1A6;line-height:1.7;margin:0}
+@keyframes osIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+#os-contact .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+#os-contact .rv.on{opacity:1;transform:none}
+@media (max-width:900px){#os-contact{padding:64px 18px 100px}#os-contact .wrap{grid-template-columns:1fr;gap:40px}#os-contact .lf{position:static}#os-contact .fm{padding:28px 20px 24px;border-radius:20px}#os-contact .row{grid-template-columns:1fr;gap:0}}
+@media (prefers-reduced-motion:reduce){#os-contact .rv{opacity:1;transform:none;transition:none}}
+#os-contact .lead strong{color:#F5F5F7;font-weight:600}#os-contact .lead{margin:26px 0 14px}#os-contact .lead2{font-size:clamp(15px,1.3vw,17px);color:#A1A1A6;margin:0 0 30px}#os-contact .inf div{align-items:center}#os-contact .inf i{display:flex;color:var(--g);flex:0 0 auto}#os-contact .inf b{width:auto;flex:0 0 auto;color:#F5F5F7;font-weight:600;padding-right:16px;border-right:1px solid #3A3B42;margin-right:4px}#os-contact .f label small{font-size:12px;color:#6E6E73;font-weight:400;margin-left:6px}#os-contact .f.bad .ch button{border-color:rgba(255,107,107,.7)}#os-contact .ag.bad span{color:#FF8A8A}#os-contact .f.bad>label{color:#FF8A8A}#os-contact .f input:-webkit-autofill,#os-contact .f input:-webkit-autofill:hover,#os-contact .f input:-webkit-autofill:focus{-webkit-box-shadow:0 0 0 100px #17181B inset!important;-webkit-text-fill-color:#F5F5F7!important;caret-color:#F5F5F7;transition:background-color 9999s}</style>
+<div class="wrap">
+<section class="lf rv">
+<img class="lg" src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@e08e1b3/hm_logo_1053.png" alt="1053 Studio">
+<p class="eb">CONTACT</p>
+<h1>함께 만들 이야기가<br><em>있나요?</em></h1>
+<p class="lead">유튜브, 광고, 스포츠, 교육 콘텐츠부터 AI 프로젝트.<br><strong>기획 · 촬영 · 편집 · 모션 그래픽까지</strong><br>1053스튜디오가 함께합니다.</p><p class="lead2">아래 정보를 보내주시면 빠르게 답변드릴게요.</p>
+<ul class="sv"><li>영상 제작</li><li>채널 운영</li><li>모션 그래픽</li><li>숏폼</li><li>브랜딩</li><li>AI 영상</li></ul>
+<div class="inf"> <div><i><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></i><b>이메일</b><a href="mailto:contact@1053studio.co.kr">contact@1053studio.co.kr</a></div> <div><i><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></i><b>작업물</b><a href="/about.html">Work 보러 가기 →</a></div> </div> </section>
+<section class="fm rv" id="osFm">
+<form novalidate>
+<div class="row">
+<div class="f" data-k="name"><label>이름<i>*</i></label><input name="name" autocomplete="name" placeholder="홍길동" maxlength="60"></div>
+<div class="f" data-k="email"><label>이메일<i>*</i></label><input name="email" type="email" autocomplete="email" placeholder="name@company.com" maxlength="120"></div>
+</div>
+<div class="row">
+<div class="f" data-k="company"><label>회사 · 채널명<i>*</i></label><input name="company" autocomplete="organization" placeholder="예) 1053스튜디오 / 채널 이름" maxlength="100"></div>
+<div class="f" data-k="phone"><label>연락처<i>*</i></label><input name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" maxlength="40"></div>
+</div>
+<div class="f" data-k="type"><label>어떤 작업인가요?<i>*</i> <small>여러 개 골라도 돼요</small></label><div class="ch" data-g="type" data-multi="1"><button type="button">영상 제작</button><button type="button">채널 운영</button><button type="button">모션 그래픽</button><button type="button">숏폼</button><button type="button">브랜딩</button><button type="button">AI 영상</button><button type="button">기타</button></div></div>
+<div class="f" data-k="budget"><label>예산<i>*</i></label><div class="ch" data-g="budget"><button type="button">아직 미정</button><button type="button">300만 원 미만</button><button type="button">300~1,000만 원</button><button type="button">1,000만 원 이상</button></div></div>
+<div class="f" data-k="schedule"><label>희망 일정<i>*</i></label><input name="schedule" placeholder="예) 12월 중순 공개 목표" maxlength="60"></div>
+<div class="f" data-k="message"><label>내용<i>*</i></label><textarea name="message" placeholder="프로젝트 내용, 참고 영상 링크, 궁금한 점을 편하게 적어 주세요. (5자 이상)" maxlength="4000"></textarea></div>
+<input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="ag" data-k="agree"><input type="checkbox" name="agree"><span>문의 답변을 위해 이름·이메일·연락처를 수집하고, 답변 후 1년 동안 보관하는 데 동의해요. <a href="/member/privacy.html" target="_blank">개인정보처리방침</a></span></label>
+<button class="sb" type="submit"><span class="sp"></span><span class="tx">문의 보내기</span></button>
+<p class="ms" role="status"></p>
+</form>
+<div class="ok"><div class="ck"></div><h2>문의가 전송됐어요</h2><p>보내 주신 내용 잘 받았어요.<br>확인하는 대로 적어 주신 이메일로 답장드릴게요.</p></div>
+</section>
+</div>
+<script>
+(function(){var R=document.getElementById('os-contact');if(!R)return;var API='https://ossul-license.doomoastro.workers.dev/v1/contact',T0=Date.now();
+var F=R.querySelector('form'),BOX=document.getElementById('osFm'),SB=R.querySelector('.sb'),MS=R.querySelector('.ms');
+[].forEach.call(R.querySelectorAll('.ch'),function(g){var multi=g.getAttribute('data-multi');[].forEach.call(g.querySelectorAll('button'),function(b){b.addEventListener('click',function(){if(!multi){[].forEach.call(g.querySelectorAll('button'),function(x){if(x!==b)x.classList.remove('on')})}b.classList.toggle('on')})})});
+function picked(k){return [].map.call(R.querySelectorAll('.ch[data-g='+k+'] button.on'),function(b){return b.textContent})}
+function bad(k,on){var e=R.querySelector('[data-k='+k+']');if(e)e.classList.toggle('bad',!!on)}
+F.addEventListener('input',function(e){var p=e.target.closest('[data-k]');if(p)p.classList.remove('bad')});F.addEventListener('change',function(e){var p=e.target.closest('[data-k]');if(p)p.classList.remove('bad')});F.addEventListener('click',function(e){var b=e.target.closest('.ch button');if(b){var p=b.closest('[data-k]');if(p)p.classList.remove('bad')}});
+F.addEventListener('submit',function(e){e.preventDefault();if(SB.disabled)return;MS.textContent='';
+var v=function(n){return (F.elements[n].value||'').trim()};var em=v('email');
+var ok=true;var CK=[['name',!!v('name'),'이름을 적어 주세요.'],['email',/^[^@ ]+@[^@ ]+[.][^@ ]+$/.test(em),'이메일 주소를 확인해 주세요.'],['company',!!v('company'),'회사 · 채널명을 적어 주세요.'],['phone',v('phone').replace(/[^0-9]/g,'').length>=8,'연락처를 확인해 주세요.'],['type',picked('type').length>0,'어떤 작업인지 골라 주세요.'],['budget',picked('budget').length>0,'예산을 골라 주세요.'],['schedule',!!v('schedule'),'희망 일정을 적어 주세요.'],['message',v('message').length>=5,'내용을 5자 이상 적어 주세요.'],['agree',F.elements.agree.checked,'개인정보 수집에 동의해 주세요.']];var first=null;CK.forEach(function(c){bad(c[0],!c[1]);if(!c[1]&&!first)first=c});if(first){ok=false;MS.textContent=first[2];var fe=R.querySelector('[data-k='+first[0]+']');if(fe){fe.scrollIntoView({behavior:'smooth',block:'center'});var fi=fe.querySelector('input,textarea');if(fi&&fi.type!=='checkbox')setTimeout(function(){fi.focus({preventScroll:true})},350)}}
+if(!ok)return;
+SB.disabled=true;SB.classList.add('ld');SB.querySelector('.tx').textContent='보내는 중';
+var body={name:v('name'),email:em,company:v('company'),phone:v('phone'),schedule:v('schedule'),message:v('message'),type:picked('type'),budget:picked('budget')[0]||'',agree:true,hp:F.elements.hp.value,t:Date.now()-T0,page:location.href};
+fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json().catch(function(){return {ok:false}}).then(function(j){return {s:r.status,j:j}})}).then(function(x){
+ if(x.j&&x.j.ok){BOX.classList.add('done');BOX.scrollIntoView({behavior:'smooth',block:'center'});return}
+ throw new Error((x.j&&x.j.message)||'fail')}).catch(function(err){SB.disabled=false;SB.classList.remove('ld');SB.querySelector('.tx').textContent='문의 보내기';
+ MS.innerHTML=(err&&err.message&&err.message!=='fail'&&err.message.indexOf('fetch')<0?err.message:'지금은 보내지 못했어요.')+' <a href="mailto:contact@1053studio.co.kr">메일로 바로 보내기</a>'})});
+var it=[].slice.call(R.querySelectorAll('.rv'));
+if(!('IntersectionObserver' in window)){it.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var d=it.indexOf(e.target);e.target.style.transitionDelay=(Math.max(0,d)*110)+'ms';e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1});
+it.forEach(function(e){io.observe(e)})})();
+</script>
+</div>
