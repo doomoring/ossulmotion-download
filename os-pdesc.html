@@ -1,0 +1,196 @@
+<div id="os-pdesc">
+<style>
+#os-pdesc{--g:#2FD36B;--l:#2A2B31;--c:#1D1E22;--t2:#A1A1A6;--t3:#6E6E73;max-width:1040px;margin:0 auto;padding:96px 20px 40px;color:#F5F5F7;font-family:inherit;word-break:keep-all;text-align:left}
+#os-pdesc *{box-sizing:border-box}
+#os-pdesc img,#os-pdesc video{max-width:none}
+#os-pdesc .eb{font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--g);margin:0 0 16px}
+#os-pdesc .hero{text-align:center}
+#os-pdesc .hero h2{font-size:clamp(40px,6vw,68px);font-weight:700;letter-spacing:-.04em;line-height:1.12;margin:0;color:#F5F5F7}
+#os-pdesc .hero p{font-size:19px;color:var(--t2);line-height:1.6;margin:22px 0 0}
+#os-pdesc .wallbox{position:relative;height:500px;margin:48px -20px 0;overflow:hidden;perspective:2200px;-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
+#os-pdesc .wall{position:absolute;left:50%;top:50%;display:grid;grid-template-columns:repeat(6,360px);gap:22px;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(52deg) rotateZ(-30deg)}
+#os-pdesc .wall img{display:block;width:360px;height:225px;object-fit:cover;object-position:0 0;border-radius:10px;box-shadow:0 26px 50px -14px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08);background:#232429}
+#os-pdesc .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:8px 0 120px}
+#os-pdesc .chips span{font-size:14px;color:var(--t2);border:1px solid var(--l);border-radius:99px;padding:8px 16px;background:var(--c)}
+#os-pdesc .pt{margin:0 0 128px}
+#os-pdesc .pt h3{font-size:clamp(28px,3.6vw,42px);font-weight:700;letter-spacing:-.035em;line-height:1.22;margin:0;color:#F5F5F7}
+#os-pdesc .pt p.d{font-size:17px;color:var(--t2);line-height:1.65;margin:14px 0 32px;max-width:660px}
+#os-pdesc .shot{border-radius:18px;overflow:hidden;border:1px solid var(--l);background:var(--c);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+#os-pdesc .shot img,#os-pdesc .shot video{display:block;width:100%;height:auto}
+#os-pdesc .g2,#os-pdesc .g3{display:grid;gap:16px;margin-top:16px}
+#os-pdesc .g2{grid-template-columns:1fr 1fr}
+#os-pdesc .g3{grid-template-columns:repeat(3,1fr)}
+#os-pdesc .card{border:1px solid var(--l);border-radius:16px;background:var(--c);overflow:hidden}
+#os-pdesc .card img,#os-pdesc .card video{display:block;width:100%;aspect-ratio:1.6;object-fit:cover;object-position:0 0;border-bottom:1px solid var(--l)}
+#os-pdesc .card.v img{aspect-ratio:16/9;object-position:50% 50%}
+#os-pdesc .card div{padding:18px 20px 22px}
+#os-pdesc .card b{display:block;font-size:17px;font-weight:700;color:#F5F5F7;letter-spacing:-.02em}
+#os-pdesc .card b em{font-style:normal;font-weight:500;color:var(--t3);font-size:14px;margin-left:6px}
+#os-pdesc .card span{display:block;font-size:14px;color:var(--t2);line-height:1.55;margin-top:7px}
+#os-pdesc .card b em span,#os-pdesc .chips b,#os-pdesc p.d span{display:inline;margin:0;font-size:inherit;color:inherit;line-height:inherit}
+#os-pdesc .chips b{font-weight:600;color:#F5F5F7}
+#os-pdesc .pair{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;align-items:center}
+#os-pdesc .pair .shot{position:relative}
+#os-pdesc .pair .shot:after{content:attr(data-l);position:absolute;left:14px;top:12px;font-size:12px;color:#F5F5F7;background:rgba(0,0,0,.55);border-radius:6px;padding:4px 8px}
+#os-pdesc .split{display:grid;grid-template-columns:240px 1fr;gap:16px;align-items:stretch}
+#os-pdesc .split .shot img{height:100%;object-fit:cover;object-position:0 0}
+#os-pdesc .list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+#os-pdesc .list div{border:1px solid var(--l);border-radius:16px;background:var(--c);padding:22px 22px 24px}
+#os-pdesc .list b{display:block;font-size:16px;font-weight:700;color:#F5F5F7;margin-bottom:8px}
+#os-pdesc .list span{display:block;font-size:14px;color:var(--t2);line-height:1.55}
+#os-pdesc .info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 24px}
+#os-pdesc .info div{border:1px solid var(--l);border-radius:18px;background:var(--c);padding:26px 24px}
+#os-pdesc .info b{display:block;font-size:17px;font-weight:700;color:#F5F5F7;margin-bottom:10px}
+#os-pdesc .info span{display:block;font-size:14px;color:var(--t2);line-height:1.6}
+#os-pdesc .refund{border:1px solid var(--l);border-radius:18px;background:var(--c);padding:28px 30px}
+#os-pdesc .refund b{display:block;font-size:17px;font-weight:700;color:#F5F5F7;margin-bottom:14px}
+#os-pdesc .refund ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+#os-pdesc .refund li{font-size:15px;color:#D2D2D7;line-height:1.6;padding-left:16px;position:relative}
+#os-pdesc .refund li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--g)}
+#os-pdesc .refund li small{display:block;font-size:13px;color:var(--t3)}
+#os-pdesc .legal{font-size:13px;color:var(--t3);text-align:center;margin:36px 0 0}
+@media(max-width:800px){#os-pdesc{padding:64px 16px 24px}#os-pdesc .wallbox{height:300px;margin:32px -16px 0}#os-pdesc .wall{transform:translate(-50%,-50%) rotateX(52deg) rotateZ(-30deg) scale(.55)}#os-pdesc .chips{margin-bottom:80px}#os-pdesc .g2,#os-pdesc .g3,#os-pdesc .list,#os-pdesc .info,#os-pdesc .pair{grid-template-columns:1fr}#os-pdesc .g3{grid-template-columns:1fr 1fr}#os-pdesc .split{grid-template-columns:1fr}#os-pdesc .split .shot:first-child{max-width:240px}#os-pdesc .pt{margin-bottom:88px}}
+</style>
+
+<div class="hero">
+  <p class="eb">PREMIERE PRO PLUGIN</p>
+  <h2>키프레임 대신,<br>누르면 끝.</h2>
+  <p>모션, 자막, 자막 바, 효과음까지.<br>고르고 누르면 타임라인에 바로 들어가요.</p>
+</div>
+<div class="wallbox" aria-hidden="true"><div class="wall">
+<img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n02.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_fd_news_kr.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n22.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_vlog.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n06.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_fd_com_jp.webp" alt="">
+<img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_info.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n25.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_theme.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n07.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_news.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n11.webp" alt="">
+<img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n01.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_panel_funtext.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_anime.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n26.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_webtoon.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_fd_vlog_jp.webp" alt="">
+<img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_fd_info_kr.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_com.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n21.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n27.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n09.webp" alt=""><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n23.webp" alt="">
+</div></div>
+<div class="chips"><span>모션 <b data-os="motion">115</b></span><span>자막 <b data-os="subs">643</b></span><span>효과음 <b data-os="sfx">152</b></span><span>macOS · Windows</span><span>30일 무료 체험</span></div>
+
+<div class="pt">
+  <p class="eb">POINT 01 · 장르별 자막</p>
+  <h3>장르마다, 딱 맞게.</h3>
+  <p class="d">뉴스, 브이로그, 정보·다큐, 커머셜, 웹툰, 애니. 실제 영상을 장면별로 보고 만든 자막이 장르마다 폴더로 정리돼 있어요. 카드를 누르고 글자만 바꾸면, 그 장르 영상처럼 들어가요.</p>
+  <div class="pair">
+    <div class="shot" data-l="패널"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_webtoon.webp" alt="웹툰 자막 폴더 화면" loading="lazy"></div>
+    <div class="shot" data-l="결과"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_webtoon.webp" alt="웹툰 자막이 들어간 영상 화면" loading="lazy"></div>
+  </div>
+  <div class="g3">
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_news.webp" alt="뉴스 자막 예시" loading="lazy"><div><b>뉴스<em><span data-os="news">70</span>개</em></b><span>헤드라인 · 속보 띠 · 인터뷰 이름 · 시세 카드. 한국 · 일본 · 미국</span></div></div>
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_vlog.webp" alt="브이로그 자막 예시" loading="lazy"><div><b>브이로그<em><span data-os="vlog">78</span>개</em></b><span>기본 자막 · 장소 · 시간 · 오늘 할 일. 한국 · 일본 · 미국</span></div></div>
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_info.webp" alt="정보·다큐 자막 예시" loading="lazy"><div><b>정보·다큐<em><span data-os="info">44</span>개</em></b><span>장 제목 · 인물 이름 · 자료 출처 · 연도</span></div></div>
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_com.webp" alt="커머셜 자막 예시" loading="lazy"><div><b>커머셜<em><span data-os="commercial">56</span>개</em></b><span>메인 카피 · 강조 카피 · 엔드 카드</span></div></div>
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_webtoon.webp" alt="웹툰 자막 예시" loading="lazy"><div><b>웹툰<em><span data-os="webtoon">54</span>개</em></b><span>무협 초식 이름 · 상태창 · 레벨 업 · 몰아보기 자막</span></div></div>
+    <div class="card v"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gr_anime.webp" alt="애니 자막 예시" loading="lazy"><div><b>애니<em><span data-os="anime">62</span>개</em></b><span>작품 느낌 12가지 · 일본어/한국어 바꿔 보기</span></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 02 · 클릭 한 번</p>
+  <h3>패널에서 누르면, 바로 영상 위에.</h3>
+  <p class="d">클립을 고르고 [넣기]를 누르면 끝. 글꼴과 색, 크기, 등장·퇴장 움직임까지 함께 들어가요.</p>
+  <div class="shot"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gc_anime.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+  <div class="g3">
+    <div class="card v"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gc_webtoon.mp4" autoplay muted loop playsinline preload="metadata"></video><div><b>웹툰</b></div></div>
+    <div class="card v"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gc_news.mp4" autoplay muted loop playsinline preload="metadata"></video><div><b>뉴스</b></div></div>
+    <div class="card v"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gc_vlog.mp4" autoplay muted loop playsinline preload="metadata"></video><div><b>브이로그</b></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 03 · 꾸밈 자막 · 자막 바</p>
+  <h3>테마 하나 고르면, 분위기까지.</h3>
+  <p class="d">키치 · 80s 애니·시티팝 · 특촬·전대 · 점프 만화 · 80s 미국 · 8비트 게임 · VHS·84 · 일본 예능. 꾸밈 자막 <span data-os="funtext">122</span>종과 자막 바 <span data-os="textbar">121</span>가지가 테마별로 맞춰져 있어요. 글자 길이를 바꿔도 크기가 알아서 맞춰져요.</p>
+  <div class="shot"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_theme.webp" alt="테마 자막 화면" loading="lazy"></div>
+  <div class="g3">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n25.webp" alt="키치 테마 자막 바" loading="lazy"><div><b>키치</b><span>말풍선 꼬리 · 구름 · 티켓 · 알림 토스트</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n26.webp" alt="특촬 테마 자막 바" loading="lazy"><div><b>특촬·전대</b><span>사선 대사 · 경보 · 본부 통신</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n27.webp" alt="VHS 테마 자막 바" loading="lazy"><div><b>VHS·84</b><span>뉴스 자막 · 터미널 · 캠코더</span></div></div>
+  </div>
+  <div class="g2">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n07.webp" alt="말풍선 화면" loading="lazy"><div><b>말풍선</b><span>메시지 앱처럼, 내가 보냄 · 상대가 보냄</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n08.webp" alt="스티커 화면" loading="lazy"><div><b>스티커</b><span>태그 칩 · 리본 · 형광펜 포인트</span></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 04 · 모션</p>
+  <h3>트랜지션부터 반복까지, 클릭 한 번.</h3>
+  <p class="d">트랜지션, 등장·퇴장, 강조, 확대·축소, 반복, 예능 효과. 카드에 마우스를 올려 미리 보고, 마음에 들면 바로 넣으세요. 빠르기와 방향도 바로 골라요.</p>
+  <div class="shot"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/v2-effect.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+  <div class="g2">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n02.webp" alt="트랜지션 화면" loading="lazy"><div><b>트랜지션<em><span data-os="transition">32</span>개</em></b><span>두 클립 사이에 바로</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n01.webp" alt="등장·퇴장 화면" loading="lazy"><div><b>등장·퇴장<em><span data-os="inout">19</span>개</em></b><span>클립 시작과 끝에 자연스럽게</span></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 05 · 콤보</p>
+  <h3>자주 쓰는 조합은, 한 세트로.</h3>
+  <p class="d">등장 · 유지 · 강조 · 퇴장을 콤보로 저장해 두면, 다음부터는 클릭 한 번으로 한꺼번에 들어가요.</p>
+  <div class="shot"><video src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/v2-combo.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 06 · 효과음 · 비트</p>
+  <h3>소리와 박자까지, 한곳에서.</h3>
+  <p class="d">효과음 <span data-os="sfx">152</span>종을 미리 듣고 바로 넣고, 음악 박자를 찾아 움직임을 박자마다 넣어요. 펀치 줌 + 바운스처럼 여러 움직임을 같이 골라 겹쳐 넣을 수도 있어요.</p>
+  <div class="g2" style="margin-top:0">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n24.webp" alt="효과음 화면" loading="lazy"><div><b>효과음</b><span>태그로 찾고, 미리 듣고, 재생헤드 위치에 바로</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n11.webp" alt="비트 싱크 화면" loading="lazy"><div><b>비트 싱크</b><span>박자를 찾아 마커 · 움직임을 박자에 맞춰</span></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 07 · 편집 도구</p>
+  <h3>귀찮은 작업은 자동으로.</h3>
+  <p class="d">편집 중간중간 시간을 잡아먹던 일들을 패널 안에서 끝내세요.</p>
+  <div class="g2" style="margin-top:0">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n12.webp" alt="자동 자막 화면" loading="lazy"><div><b>자동 자막</b><span>내 컴퓨터 안에서 바로 받아쓰기. 영상은 밖으로 나가지 않아요</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n14.webp" alt="무음 구간 제거 화면" loading="lazy"><div><b>무음 구간 제거</b><span>말 없는 구간을 찾아 한 번에 잘라내기</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n13.webp" alt="데드존 가이드 화면" loading="lazy"><div><b>데드존 가이드</b><span>쇼츠·릴스에서 가려지는 영역을 미리 보며 배치</span></div></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n15.webp" alt="이징 곡선 화면" loading="lazy"><div><b>이징 곡선</b><span>가속·감속을 곡선으로 다듬고 저장해 두기</span></div></div>
+  </div>
+</div>
+
+<div class="pt">
+  <p class="eb">POINT 08 · 내 작업 화면에 맞게</p>
+  <h3>좁게 써도, 넓게 써도.</h3>
+  <p class="d">패널 폭에 맞춰 배치가 알아서 바뀌어요. 작은 모니터에선 나란히 · 위아래를 직접 고를 수도 있어요.</p>
+  <div class="split">
+    <div class="shot"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/n16.webp" alt="좁은 패널 화면" loading="lazy"></div>
+    <div class="shot"><img src="https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/hm_gp_anime.webp" alt="넓은 패널 화면" loading="lazy"></div>
+  </div>
+  <div class="list">
+    <div><b>줄마다 글꼴</b><span>글자 칸마다 [글꼴] 버튼으로 줄마다 다른 글꼴</span></div>
+    <div><b>세로 영상</b><span>쇼츠·릴스 세로 영상에서도 화면 전체 자막이 꽉 차게</span></div>
+    <div><b>넣는 중에도 안전하게</b><span>다른 시퀀스를 열어도 처음 시퀀스에 들어가고, 되돌리기도 그대로</span></div>
+  </div>
+</div>
+
+<div class="pt" style="margin-bottom:0">
+  <p class="eb">이용 안내</p>
+  <h3 style="margin-bottom:32px">시작은 무료로, 결제는 마음에 들면.</h3>
+  <div class="info">
+    <div>
+<b>30일 무료 체험</b><span>설치 후 플러그인 패널에 이메일을 넣고, 이메일로 온 확인 버튼을 누르면 바로 시작돼요. 카드 등록이 필요 없어요.</span>
+</div>
+    <div>
+<b>1개월 이용권 (1회 결제)</b><span>7,900원을 한 번 결제하면 30일 동안 모든 기능을 쓸 수 있어요. 자동으로 다시 결제되지 않아요. 키는 결제 즉시 이메일로 오고, 키를 처음 입력한 날부터 30일이 시작돼요. 키 1개는 컴퓨터 1대에서 쓸 수 있어요(패널의 [이 컴퓨터 해제]로 30일에 2번까지 이전). 기간이 끝난 뒤 계속 쓰려면 이용권을 다시 구매하면 돼요.</span>
+</div>
+    <div>
+<b>설치</b><span>macOS · Windows 설치 파일은 홈페이지에서 받을 수 있어요. Adobe Premiere Pro가 필요합니다.</span>
+</div>
+  </div>
+  <div class="refund">
+    <b>환불 안내</b>
+    <ul>
+      <li>라이선스 키 입력(등록) 전: 키를 받은 날부터 7일 이내 전액 환불</li>
+      <li>라이선스 키 입력 후: 디지털 콘텐츠 특성상 환불 불가<small>전자상거래법 제17조 제2항 제5호에 따라 청약철회가 제한됩니다.</small>
+</li>
+      <li>프로그램 결함으로 정상 이용이 불가한 경우, 확인 후 환불해 드립니다.</li>
+      <li>1회 결제 상품이라 자동으로 다시 결제되지 않습니다.</li>
+<li>구매 전 30일 무료 체험으로 충분히 사용해 보신 뒤 구매해 주세요.</li>
+    </ul>
+  </div>
+  <p class="legal">Adobe, Premiere Pro는 Adobe Inc.의 상표이며, 오쓸모션은 Adobe와 제휴 관계가 아닙니다.</p>
+</div>
+</div>
