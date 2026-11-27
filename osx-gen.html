@@ -1,0 +1,90 @@
+<!-- ▼ osx-gen: 자막·자막 바 장르 (PC 전용, 휴대폰은 위 #osx-bars 그대로) 2026-11-27 v4.9.44 -->
+<style id="osx-gen-css">
+#osx-gen{display:none}
+@media (min-width:761px){#osx-bars{display:none!important}#osx-gen{display:block}}
+#osx-gen .gx-st{position:sticky;top:0;height:100vh;overflow:hidden}
+#osx-gen .gx-hd{position:absolute;left:0;right:0;top:calc(4vh + 60px);text-align:center;z-index:2000;pointer-events:none}
+#osx-gen .gx-hd h2{margin:0}
+#osx-gen .gx-gn{position:relative;height:30px;margin-top:6px;overflow:hidden}
+#osx-gen .gx-gn span{position:absolute;left:0;right:0;top:0;font-size:clamp(14px,1.25vw,18px);color:var(--osx-dim);font-weight:400;transition:transform .7s cubic-bezier(.2,.9,.1,1),opacity .5s,filter .6s}
+#osx-gen .gx-gn span b{color:var(--osx-ink);font-weight:700;margin-right:8px}
+#osx-gen .gx-gn span.in{transform:translateY(100%);opacity:0;filter:blur(6px)}
+#osx-gen .gx-gn span.out{transform:translateY(-100%);opacity:0;filter:blur(6px)}
+#osx-gen .gx-stage{position:absolute;inset:0;perspective:1700px;perspective-origin:50% 42%}
+#osx-gen .gx-cd{position:absolute;left:0;top:0;transform-style:preserve-3d;will-change:transform,opacity}
+#osx-gen .gx-fr{position:relative;width:100%;height:100%;border-radius:16px;overflow:hidden;background:#232429;box-shadow:0 50px 100px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07)}
+#osx-gen .gx-fr img{width:100%;height:100%;object-fit:cover;display:block;max-width:none}
+#osx-gen .gx-sh{position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.1) 45%,rgba(255,255,255,0) 60%);background-size:300% 100%;mix-blend-mode:screen;pointer-events:none}
+#osx-gen .gx-dk{position:absolute;inset:0;background:#0d0e10;pointer-events:none}
+#osx-gen .gx-ring{position:absolute;inset:0;border-radius:16px;box-shadow:0 0 0 1.5px rgba(47,211,107,.6);pointer-events:none}
+#osx-gen .gx-lb{position:absolute;left:0;top:0;font-size:14px;color:var(--osx-dim);white-space:nowrap;pointer-events:none;z-index:1500}
+#osx-gen .gx-bar{position:absolute;left:50%;bottom:4.5vh;transform:translateX(-50%);display:flex;gap:6px;z-index:2000}
+#osx-gen .gx-bar i{width:26px;height:3px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden;position:relative}
+#osx-gen .gx-bar i b{position:absolute;inset:0;background:var(--osx-mint);transform-origin:left;transform:scaleX(0)}
+</style>
+<section class="osx" id="osx-gen" aria-label="자막·자막 바 장르 소개"><div class="gx-st">
+ <div class="gx-stage" id="gx-stage"></div>
+ <div class="gx-hd osx-h"><span class="osx-eb">자막 · 자막 바</span><h2>장르마다, 딱 맞게.</h2><div class="gx-gn" id="gx-gn"></div></div>
+ <div class="gx-bar" id="gx-bar"></div>
+</div></section>
+<script id="osx-gen-js">
+(function(){
+var sec=document.getElementById('osx-gen');if(!sec)return;
+var G='https://cdn.jsdelivr.net/gh/doomoring/ossulmotion-download@4ba1a2e/';
+function n(k,d){return window.OSN?OSN(k,d):d}
+var D=[['테마','hm_gp_theme','8가지 테마 · 188개'],['뉴스','hm_gp_news','한국 · 일본 · 미국 · '+n('news','70')+'개'],['브이로그','hm_gp_vlog','한국 · 일본 · 미국 · '+n('vlog','78')+'개'],['정보·다큐','hm_gp_info','한국 · 일본 · 미국 · '+n('info','44')+'개'],['커머셜','hm_gp_com','한국 · 일본 · 미국 · '+n('commercial','56')+'개'],['웹툰','hm_gp_webtoon','무협 · 판타지 · 몰아보기 · '+n('webtoon','54')+'개'],['애니','hm_gp_anime','12가지 느낌 · 일본어/한국어 · '+n('anime','62')+'개'],['자막 바 · 키치','n25','키치 테마 자막 바'],['자막 바 · 특촬','n26','특촬·전대 테마 자막 바'],['자막 바 · VHS','n27','VHS·84 테마 자막 바']];
+var N=D.length,stage=document.getElementById('gx-stage'),gn=document.getElementById('gx-gn'),bar=document.getElementById('gx-bar');
+var SEG=.95,TAIL=1.6;sec.style.height=((N*SEG+TAIL)*100+100)+'vh';
+bar.innerHTML=D.map(function(){return '<i><b></b></i>'}).join('');var BI=[].slice.call(bar.querySelectorAll('b'));
+function cl(v,a,b){return v<a?a:v>b?b:v}function ss(t){t=cl(t,0,1);return t*t*(3-2*t)}function eio(t){t=cl(t,0,1);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}function lerp(a,b,t){return a+(b-a)*t}
+var KEYS=['x','y','z','rx','ry','rz','s','o','dk','ring','lo'];
+var SL=[[-.33,-.17,-7,-260,.42],[.34,.15,6,-300,.4],[-.36,.2,5,-340,.36],[.35,-.2,-5,-320,.38],[-.13,-.3,3,-420,.32],[.14,.32,-4,-380,.33],[-.43,-.02,8,-460,.3],[.43,.0,-8,-440,.31],[.0,-.34,-2,-520,.28],[-.2,.36,4,-500,.29]];
+var C=D.map(function(d,i){var el=document.createElement('div');el.className='gx-cd';
+ el.innerHTML='<div class="gx-fr"><img alt="오쓸모션 '+d[0]+' 자막 화면" loading="lazy" decoding="async" ez-prevent="img" src="'+G+d[1]+'.webp"><div class="gx-sh"></div><div class="gx-dk"></div><div class="gx-ring"></div></div>';
+ stage.appendChild(el);var lb=document.createElement('div');lb.className='gx-lb';lb.textContent=d[0];stage.appendChild(lb);
+ var st={},vl={};KEYS.forEach(function(k){st[k]=0;vl[k]=0});
+ return {el:el,lb:lb,sh:el.querySelector('.gx-sh'),dk:el.querySelector('.gx-dk'),ring:el.querySelector('.gx-ring'),s:st,v:vl,init:false}});
+var W,H,cw,ch,GR={};
+function lay(){W=innerWidth;H=window.__VH||innerHeight;cw=Math.min(W*.5,H*.52*1.6);ch=cw/1.6;
+ var cols=5,rows=Math.ceil(N/cols),gg=Math.max(16,W*.016),gw=Math.min((W*.84-(cols-1)*gg)/cols,((H*.6-(rows-1)*(gg+30))/rows)*1.6);
+ GR={cols:cols,gw:gw,gs:gw+gg,gr:gw/1.6+gg+30,x0:W/2-(cols*gw+(cols-1)*gg)/2+gw/2,y0:H*.62-((rows*(gw/1.6)+(rows-1)*(gg+30))/2)+gw/1.6/2};
+ C.forEach(function(c){c.el.style.width=cw+'px';c.el.style.height=ch+'px'})}
+lay();addEventListener('resize',lay,{passive:true});
+function target(i,pos,fin,vel){var d=pos-i,T={x:W/2,y:H*.58,z:0,rx:0,ry:0,rz:0,s:1,o:1,dk:0,ring:0,lo:0};
+ if(d<-1.15){T.x=W*1.15;T.z=-900;T.ry=-55;T.o=0;T.s=.8}
+ else if(d<-.15){var t=eio((d+1.15)/1);T.x=lerp(W*1.12,W/2,t);T.z=lerp(-900,0,t);T.ry=lerp(-58,0,t);T.rz=lerp(4,0,t);T.s=lerp(.82,1,t);T.o=cl((d+1.15)*2.2,0,1);T.dk=lerp(.5,0,t)}
+ else if(d<.15){T.ring=cl(1-Math.abs(d)/.2,0,1);T.ry=-d*8;T.rx=cl(-vel*900,-7,7)}
+ else{var k=d-.15,u=eio(cl(k/1.15,0,1)),sl=SL[i%SL.length];
+  var tx=W/2+sl[0]*W,ty=H*.58+sl[1]*H;
+  T.x=lerp(W/2,tx,u);T.y=lerp(H*.58,ty,u);T.z=lerp(0,sl[3],u)-Math.sin(u*Math.PI)*260;
+  T.ry=lerp(0,-sl[0]*34,u)+Math.sin(u*Math.PI)*(sl[0]<0?40:-40);T.rx=lerp(0,sl[1]*-18,u);T.rz=lerp(0,sl[2],u);
+  T.s=lerp(1,sl[4],u);T.dk=lerp(0,.42,u);
+  var age=Math.max(0,k-1.15);T.z-=Math.min(age,6)*40;T.dk+=Math.min(age,6)*.04}
+ if(fin>0){var f=eio(cl((fin*1.5)-i*.05,0,1)),gx=GR.x0+(i%GR.cols)*GR.gs,gy=GR.y0+Math.floor(i/GR.cols)*GR.gr,gs=GR.gw/cw;
+  T.x=lerp(T.x,gx,f);T.y=lerp(T.y,gy,f);T.z=lerp(T.z,0,f);T.ry=lerp(T.ry,0,f);T.rx=lerp(T.rx,0,f);T.rz=lerp(T.rz,0,f);T.s=lerp(T.s,gs,f);T.o=lerp(T.o,1,f);T.dk=lerp(T.dk,0,f);T.ring=lerp(T.ring,0,f);T.lo=ss((f-.6)/.4)}
+ return T}
+var K=170,DAMP=2*Math.sqrt(K)*.78,lastY=scrollY,vel=0,lastT=0,lastKey=null,vis=false,raf=0;
+function setName(html){var o=gn.querySelector('span:not(.out)');if(o){o.classList.add('out');setTimeout(function(){o.remove()},800)}var s=document.createElement('span');s.className='in';s.innerHTML=html;gn.appendChild(s);requestAnimationFrame(function(){requestAnimationFrame(function(){s.classList.remove('in')})})}
+function frame(t){raf=0;var dt=lastT?Math.min(.05,(t-lastT)/1000):1/60;lastT=t;
+ var r=sec.getBoundingClientRect(),len=sec.offsetHeight-H,p=len>0?cl(-r.top/len,0,1):0;
+ var raw=(p*(N*SEG+TAIL))/SEG-.3,pos=Math.min(raw,N-1+.1),fin=cl((raw-(N-.75))/(TAIL/SEG*.7),0,1);
+ var sv=(scrollY-lastY)/Math.max(1,len);lastY=scrollY;vel+=(sv-vel)*.2;
+ var moving=false;
+ C.forEach(function(c,i){var T=target(i,pos,fin,vel),S=c.s,V=c.v;
+  if(!c.init){KEYS.forEach(function(k){S[k]=T[k]});c.init=true}
+  for(var j=0,h=dt/2;j<2;j++)KEYS.forEach(function(k){var a=K*(T[k]-S[k])-DAMP*V[k];V[k]+=a*h;S[k]+=V[k]*h});
+  KEYS.forEach(function(k){if(Math.abs(T[k]-S[k])>.01||Math.abs(V[k])>.01)moving=true});
+  var o=cl(S.o,0,1);
+  c.el.style.transform='translate3d('+(S.x-cw/2).toFixed(1)+'px,'+(S.y-ch/2).toFixed(1)+'px,'+S.z.toFixed(1)+'px) rotateX('+S.rx.toFixed(2)+'deg) rotateY('+S.ry.toFixed(2)+'deg) rotateZ('+S.rz.toFixed(2)+'deg) scale('+S.s.toFixed(4)+')';
+  c.el.style.opacity=o.toFixed(3);c.el.style.visibility=o<.005?'hidden':'visible';c.el.style.zIndex=Math.round(1000+S.z);
+  c.dk.style.opacity=cl(S.dk,0,.9).toFixed(3);c.ring.style.opacity=cl(S.ring,0,1).toFixed(3);
+  c.sh.style.backgroundPosition=(50+S.ry*1.6).toFixed(1)+'% 0';
+  var lo=cl(S.lo,0,1);c.lb.style.opacity=lo.toFixed(3);c.lb.style.transform='translate3d('+(S.x).toFixed(1)+'px,'+(S.y+ch*S.s/2+10).toFixed(1)+'px,0) translateX(-50%)'});
+ var ci=cl(Math.round(pos),0,N-1),key=fin>.45?'all':ci;
+ if(key!==lastKey){lastKey=key;setName(key==='all'?'<b>'+N+'가지 장르</b>자막 폴더 '+n('folders','364')+' · 자막 바 '+n('textbar','121'):'<b>'+D[ci][0]+'</b>'+D[ci][2])}
+ BI.forEach(function(b,i){b.style.transform='scaleX('+cl(pos-i+.5,0,1).toFixed(3)+')'});bar.style.opacity=(1-fin).toFixed(2);
+ if(vis||moving)raf=requestAnimationFrame(frame);else lastT=0}
+new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis&&!raf){lastT=0;raf=requestAnimationFrame(frame)}},{rootMargin:'200px 0px'}).observe(sec);
+})();
+</script>
+<!-- ▲ osx-gen -->
